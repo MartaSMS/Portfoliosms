@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  >
+
+  <title>Diseño Gráfico</title>
+
+  <!-- Fuentes: Borel y Berkshire Swash -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Borel&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+    <style>
+       .boton-menu {
+      position: absolute;
+      top: -15%;
+      left: -5%;
+
+      z-index: 15;
+
+      cursor: pointer;
+      pointer-events: auto;
+    }
+
+    .boton-menu-img {
+      width: 5cqw;
+      height: auto;
+      display: block;
+
+      filter: none;
+      transition: filter 0.4s ease;
+    }
+
+    .boton-menu:hover .boton-menu-img {
+      filter:
+        drop-shadow(0 0 8px rgba(255, 180, 220, 0.6))
+        drop-shadow(0 0 25px rgba(255, 180, 220, 0.4));
+    }
+  </style>
+</head>
+
+<body>
+  <div class="scenediseno">
+
+    <!-- BACKGROUND -->
+    <img
+      src="assets/fotocontacto.jpeg"
+      class="background"
+      alt=""
+    >
+
+    <!-- ELEMENTOS INTERACTIVOS -->
+    <div class="elementos">
+
+      <a href="index.html" class="boton-menu">
+  <img src="assets/menu.png" class="boton-menu-img-sm" alt="Volver al home">
+</a>
+<div class="info">
+    <p> Puedes encontrarme en:</p>
+       <a href="https://www.linkedin.com/in/marta-serrano-diseñadora" target="_blank" rel="noopener" class="mi-boton-sb">
+  <img src="assets/Linkedin.png" class="mi-boton-img-sb" alt="LinkedIn de Marta Serrano">
+</a>
+    <p class="mail-in"> O mandar un correo a:</p>
+      <a href="mailto:martaserranomarin.disenadora@gmail.com" target="_blank" rel="noopener" class="mi-boton-sobre">
+  <img src="assets/Mail.png" class="mi-boton-img-sobre" alt="LinkedIn de Marta Serrano">
+</a>
+</div>
