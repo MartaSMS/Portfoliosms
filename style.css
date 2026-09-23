@@ -1249,6 +1249,7 @@ transform: rotate(0deg);
 }
 .pestana-home {
   position: absolute;
+  width: 100%;
   top: -8%;      /* negativo y bastante grande, para que solo asome un poco */
   left: 50%;
   transform: translateX(-50%);
