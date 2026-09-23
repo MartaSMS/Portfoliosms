@@ -1249,14 +1249,17 @@ transform: rotate(0deg);
 }
 .pestana-home {
   position: absolute;
-  width: 100%;
-  top: -50%;      /* negativo y bastante grande, para que solo asome un poco */
+  width: 12cqw;       
+  top: -3%;          
   left: 50%;
-  transform: translateX(50%);
+  transform: translateX(-50%);
 
   z-index: 100;
+
+  transition: filter 0.4s ease;
 }
-.pestana-home:hover .pestana-home {
+
+.pestana-home:hover {
   filter:
     drop-shadow(0 0 8px rgba(255, 180, 220, 0.6))
     drop-shadow(0 0 25px rgba(255, 180, 220, 0.4));
