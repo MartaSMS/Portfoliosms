@@ -1,4 +1,5 @@
 
+
 html,
 body {
   width: 100%;
@@ -10,6 +11,7 @@ body {
   overflow: hidden;
   background: #000;
 }
+
 
 
 
@@ -39,6 +41,9 @@ body {
   container-name: scene;
 }
 
+
+
+
 .background {
   display: block;
 
@@ -53,6 +58,8 @@ body {
   user-select: none;
 }
 
+
+
 .elementos {
   position: absolute;
 
@@ -65,6 +72,8 @@ body {
 
   pointer-events: none;
 }
+
+
 
 
 .Button-Diseno,
@@ -84,6 +93,8 @@ body {
   color: inherit;
 }
 
+
+
 .Button-Diseno img,
 .button-web img,
 .button-contacto img,
@@ -92,13 +103,13 @@ body {
 
   display: block;
 
+
   filter: none;
 
   transition:
     filter 0.5s ease,
     transform 0.5s ease;
 }
-
 
 
 .button-text,
@@ -132,6 +143,7 @@ body {
 
 
 
+
 .Button-Diseno {
   top: 84%;
   left: 35%;
@@ -153,6 +165,8 @@ body {
 
   z-index: 20;
 }
+
+
 
 
 .button-web {
@@ -178,6 +192,7 @@ body {
 }
 
 
+
 .button-contacto {
   top: 83%;
   left: 65%;
@@ -200,6 +215,7 @@ body {
 
   transform: none;
 }
+
 
 
 
@@ -244,6 +260,7 @@ body {
 
 
 
+
 .Button-Diseno:hover .button-text,
 .button-web:hover .texto-web,
 .button-contacto:hover .texto-contacto,
@@ -252,6 +269,7 @@ body {
 
   filter: blur(0);
 }
+
 
 
 
@@ -270,6 +288,8 @@ body {
 }
 
 
+
+
 .button-contacto:hover .texto-contacto {
   transform: scale(1.04);
 }
@@ -279,6 +299,8 @@ body {
 .button-sobre-mi:hover span {
   transform: scale(1.04);
 }
+
+
 
 .scenediseno {
  position: fixed;
@@ -314,6 +336,8 @@ body {
   z-index: 10;
   pointer-events: none;
 }
+
+
 
 
 .tarjeta {
@@ -400,8 +424,7 @@ body {
   left: 0%;
 }
 .foto-proyecto-4 {
-  position: absolute;   
-
+  position: absolute; 
   width: 40%;
   height: 80%;
   object-fit: cover;
@@ -474,6 +497,7 @@ body {
   container-type: size;
   container-name: scene;
 }
+
 
 .page h3.titulo-proyecto1 {
   position: absolute;
@@ -895,7 +919,8 @@ transform: rotate(0deg);
   left: 50%;
   transform: translateX(-50%);
 
-  z-index: 7;        
+  z-index: 7;     
+
   white-space: nowrap;
 
   font-family: "Berkshire swash", cursive; 
@@ -940,7 +965,7 @@ transform: rotate(0deg);
 }
 .lista-proyecto2 {
   position: absolute;
-  top: 70%;          
+  top: 50%;          
   left: 43%;
   transform: translateX(-50%);
   width: 70%;
@@ -956,21 +981,269 @@ transform: rotate(0deg);
 }
 
 .lista-proyecto2 li {
-  margin-bottom: 0.3cqw;   
-  text-align: left;       
+  margin-bottom: 0.3cqw; 
+  text-align: left;        
 }
-.page p.sobremitexto {   
+.page p.sobremitexto {  
   position: absolute;
   top: 13%;
-  left: 3%;
+  left: 0%;
 
-  width: 40%;          
+  width: 45%;            
 
   margin: 0;
-  padding-left: 1.2cqw;
+  padding-left: 1.9cqw;
 
   font-family: "Berkshire Swash", serif;
-  font-size: 0.5cqw;
+  font-size: 0.8cqw;
   color: #1f1711;
   text-align: justify;
+}
+.page p.titulosobremi {  
+  position: absolute;
+  top: 5%;
+  left: 3%;
+
+  width: 60%;       
+  margin: 0;
+  padding-left: 1.5cqw;
+
+  font-family: "Berkshire Swash", serif;
+  font-size: 1.5cqw;
+  color: #e977d0;
+  text-align: justify;
+}
+.page p.especialidades {  
+  position: absolute;
+  top: 44%;
+  left: 0%;
+
+  width: 60%;            
+
+  margin: 0;
+  padding-left: 1.5cqw;
+
+  font-family: "Berkshire Swash", serif;
+  font-size: 1.5cqw;
+  color: #e977d0;
+  text-align: justify;
+}
+.page p.aptitudes {   
+  position: absolute;
+  top: 75%;
+  left: 0%;
+
+  width: 60%;          
+
+  margin: 0;
+  padding-left: 1.5cqw;
+
+  font-family: "Berkshire Swash", serif;
+  font-size: 1.5cqw;
+  color: #e977d0;
+  text-align: justify;
+}
+.lista-proyecto3 {
+  position: absolute;
+  top: 81%;        
+  left: 43%;
+  transform: translateX(-50%);
+  width: 70%;
+
+  margin: 0;
+  padding-left: 1.2cqw;   
+
+  font-family: "Berkshire Swash", serif;
+  font-size: 0.85cqw;
+  color: #1f1711;
+
+  list-style-type: disc;  
+}
+.lista-proyecto4 {
+  position: absolute;
+  top: 11%;         
+  left: 43%;
+  transform: translateX(-50%);
+  width: 70%;
+
+  margin: 0;
+  padding-left: 1.2cqw; 
+
+  font-family: "Berkshire Swash", serif;
+  font-size: 0.85cqw;
+  color: #1f1711;
+
+  list-style-type: disc;  
+}
+.lista-proyecto5 {
+  position: absolute;
+  top: 61%;          
+  left: 43%;
+  transform: translateX(-50%);
+  width: 70%;
+
+  margin: 0;
+  padding-left: 1.2cqw;   
+
+  font-family: "Berkshire Swash", serif;
+  font-size: 1cqw;
+  color: #1f1711;
+
+  list-style-type: disc;  
+}
+.page p.experiencia {  
+  position: absolute;
+  top: 35%;
+  left: 30%;
+
+  width: 60%;          
+
+  margin: 0;
+  padding-left: 1.5cqw;
+
+  font-family: "Berkshire Swash", serif;
+  font-size: 1.5cqw;
+  color: #e977d0;
+  text-align: justify;
+}
+.page p.empresa-puesto { 
+  position: absolute;
+  top: 41%;
+  left: 15%;
+
+  width: 60%;          
+
+  margin: 0;
+  padding-left: 1.5cqw;
+
+  font-family: "Berkshire Swash", serif;
+  font-size: 0.9cqw;
+  color: #7a1765;
+  text-align: justify;
+}
+.lista-proyecto6 {
+  position: absolute;
+  top: 47%;         
+  left: 49%;
+  transform: translateX(-50%);
+  width: 80%;
+
+  margin: 0;
+  padding-left: 1.2cqw; 
+
+  font-family: "Berkshire Swash", serif;
+  font-size: 0.85cqw;
+  color: #1f1711;
+  text-align: justify;
+
+  list-style-type: disc;  
+}
+.mi-boton {
+  position: absolute;
+  top: 90%;   
+  left: 50%;
+
+  z-index: 10;
+
+  cursor: pointer;
+  pointer-events: auto; 
+}
+
+.mi-boton-img {
+  width: 2cqw;   
+  height: auto;
+  display: block;
+
+  transition: filter 0.4s ease;
+}
+
+.mi-boton:hover .mi-boton-img {
+  filter:
+    drop-shadow(0 0 8px rgba(255, 180, 220, 0.6))
+    drop-shadow(0 0 25px rgba(255, 180, 220, 0.4));
+}
+.boton-menu-img-sm {
+  width: 100cqw;
+  height: auto;
+  display: block;
+  filter: none;
+  transition: filter 0.4s ease;
+}
+.info {   
+  position: absolute;
+  top: 27%;
+  left: 35%;
+
+  width: 60%;        
+
+  margin: 0;
+  padding-left: 1.5cqw;
+
+  font-family: "Berkshire Swash", serif;
+  font-size: 1.5cqw;
+  color: #7a1765;
+  text-align: justify;
+  transform: rotate(-14deg);
+}
+.mi-boton-img-sb {
+  width: 2cqw;   
+  height: auto;
+  display: block;
+
+  transition: filter 0.4s ease;
+}
+
+.mi-boton:hover .mi-boton-img-sb {
+  filter:
+    drop-shadow(0 0 8px rgba(255, 180, 220, 0.6))
+    drop-shadow(0 0 25px rgba(255, 180, 220, 0.4));
+}
+.mi-boton-sb {
+  position: absolute;
+  top: 80%;     
+  left: 20%;
+
+  z-index: 10;
+
+  cursor: pointer;
+  pointer-events: auto;   
+}
+.mail-in {
+  position: absolute;
+  top: 107%;
+  left: 5%;
+
+  width: 60%;           
+  margin: 0;
+  padding-left: 1.5cqw;
+
+  font-family: "Berkshire Swash", serif;
+  font-size: 1.5cqw;
+  color: #7a1765;
+  text-align: justify;
+  transform: rotate(-3deg);
+}
+.mi-boton-img-sobre {
+  width: 4cqw;   
+  height: auto;
+  display: block;
+
+  transition: filter 0.4s ease;
+  transform: rotate(10deg);
+}
+
+.mi-boton:hover .mi-boton-img-sobre {
+  filter:
+    drop-shadow(0 0 8px rgba(255, 180, 220, 0.6))
+    drop-shadow(0 0 25px rgba(255, 180, 220, 0.4));
+}
+.mi-boton-sobre {
+  position: absolute;
+  top: 150%;     
+  left: 20%;
+
+  z-index: 10;
+
+  cursor: pointer;
+  pointer-events: auto;   /
 }
