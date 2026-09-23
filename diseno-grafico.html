@@ -276,24 +276,30 @@ Diseño Editorial</h3>
   </div>
 
   <!-- Librería del flipbook (StPageFlip), vía CDN -->
-  <script src="https://cdn.jsdelivr.net/npm/page-flip/dist/js/page-flip.browser.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/page-flip/dist/js/page-flip.browser.min.js"></script>
 
-  <script>
-    const pageFlip = new St.PageFlip(document.getElementById('book'), {
-      width: 400,
-      height: 550,
-      size: 'stretch',
-      minWidth: 200,
-      maxWidth: 900,
-      minHeight: 280,
-      maxHeight: 1200,
+<script>
+  const pageFlip = new St.PageFlip(document.getElementById('book'), {
+    width: 400,
+  height: 550,
+  size: 'stretch',
+  minWidth: 100,     // antes 200
+  maxWidth: 900,
+  minHeight: 140,    // antes 280
+  maxHeight: 1200,
 
-      showCover: true,
-      maxShadowOpacity: 0.5,
-      mobileScrollSupport: false
-    });
+  showCover: true,
+  maxShadowOpacity: 0.5,
+  mobileScrollSupport: false
+  });
 
-    pageFlip.loadFromHTML(document.querySelectorAll('.page'));
-  </script>
+  pageFlip.loadFromHTML(document.querySelectorAll('.page'));
+
+  // Forzar que recalcule el tamaño cada vez que cambia la ventana
+  window.addEventListener('resize', () => {
+    pageFlip.update();
+  });
+</script>
+  
 </body>
 </html>
