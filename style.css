@@ -1,6 +1,3 @@
-/* =====================================================
-   CONFIGURACIÓN GENERAL
-   ===================================================== */
 
 html,
 body {
@@ -15,9 +12,6 @@ body {
 }
 
 
-/* =====================================================
-   SCENE
-   ===================================================== */
 
 .scene {
   position: fixed;
@@ -45,11 +39,6 @@ body {
   container-name: scene;
 }
 
-
-/* =====================================================
-   BACKGROUND
-   ===================================================== */
-
 .background {
   display: block;
 
@@ -64,11 +53,6 @@ body {
   user-select: none;
 }
 
-
-/* =====================================================
-   ZONA DE ELEMENTOS
-   ===================================================== */
-
 .elementos {
   position: absolute;
 
@@ -82,10 +66,6 @@ body {
   pointer-events: none;
 }
 
-
-/* =====================================================
-   CONFIGURACIÓN COMÚN DE LOS ENLACES
-   ===================================================== */
 
 .Button-Diseno,
 .button-web,
@@ -104,11 +84,6 @@ body {
   color: inherit;
 }
 
-
-/* =====================================================
-   CONFIGURACIÓN COMÚN DE LAS IMÁGENES
-   ===================================================== */
-
 .Button-Diseno img,
 .button-web img,
 .button-contacto img,
@@ -117,7 +92,6 @@ body {
 
   display: block;
 
-  /* Las imágenes NO tienen blur */
   filter: none;
 
   transition:
@@ -126,9 +100,6 @@ body {
 }
 
 
-/* =====================================================
-   CONFIGURACIÓN COMÚN DE LOS TEXTOS
-   ===================================================== */
 
 .button-text,
 .texto-web,
@@ -160,9 +131,6 @@ body {
 }
 
 
-/* =====================================================
-   DISEÑO GRÁFICO
-   ===================================================== */
 
 .Button-Diseno {
   top: 84%;
@@ -187,10 +155,6 @@ body {
 }
 
 
-/* =====================================================
-   DISEÑO WEB / UI / UX
-   ===================================================== */
-
 .button-web {
   top: 57%;
   left: 50%;
@@ -213,10 +177,6 @@ body {
   z-index: 20;
 }
 
-
-/* =====================================================
-   CONTACTO
-   ===================================================== */
 
 .button-contacto {
   top: 83%;
@@ -242,9 +202,6 @@ body {
 }
 
 
-/* =====================================================
-   SOBRE MÍ
-   ===================================================== */
 
 .button-sobre-mi {
   top: 80%;
@@ -270,10 +227,6 @@ body {
 }
 
 
-/* =====================================================
-   HOVER — IMÁGENES
-   ===================================================== */
-
 .Button-Diseno:hover img,
 .button-web:hover img,
 .button-contacto:hover img,
@@ -290,9 +243,6 @@ body {
 }
 
 
-/* =====================================================
-   HOVER — TEXTOS
-   ===================================================== */
 
 .Button-Diseno:hover .button-text,
 .button-web:hover .texto-web,
@@ -304,9 +254,6 @@ body {
 }
 
 
-/* =====================================================
-   HOVER — DISEÑO GRÁFICO
-   ===================================================== */
 
 .Button-Diseno:hover .button-text {
   transform:
@@ -315,9 +262,6 @@ body {
 }
 
 
-/* =====================================================
-   HOVER — DISEÑO WEB
-   ===================================================== */
 
 .button-web:hover .texto-web {
   transform:
@@ -326,26 +270,15 @@ body {
 }
 
 
-/* =====================================================
-   HOVER — CONTACTO
-   ===================================================== */
-
 .button-contacto:hover .texto-contacto {
   transform: scale(1.04);
 }
 
 
-/* =====================================================
-   HOVER — SOBRE MÍ
-   ===================================================== */
 
 .button-sobre-mi:hover span {
   transform: scale(1.04);
 }
-
-/* =====================================================
-   ESCENA — PÁGINA DISEÑO GRÁFICO
-   ===================================================== */
 
 .scenediseno {
  position: fixed;
@@ -374,9 +307,6 @@ body {
 }
 
 
-/* =====================================================
-   ZONA DE ELEMENTOS (tarjetas)
-   ===================================================== */
 
 .elementos {
   position: absolute;
@@ -385,10 +315,6 @@ body {
   pointer-events: none;
 }
 
-
-/* =====================================================
-   TARJETAS CON FLIP
-   ===================================================== */
 
 .tarjeta {
   position: absolute;
@@ -474,7 +400,7 @@ body {
   left: 0%;
 }
 .foto-proyecto-4 {
-  position: absolute;   /* ← esto es lo que falta */
+  position: absolute;   
 
   width: 40%;
   height: 80%;
@@ -485,7 +411,7 @@ body {
   left: 0%;
 }
 .foto-proyecto-5 {
-  position: absolute;   /* ← esto es lo que falta */
+  position: absolute;  
 
   width: 78%;
   height: 100%;
@@ -549,10 +475,6 @@ body {
   container-name: scene;
 }
 
-/* Antes: .titulo-proyecto1
-   Ahora combinamos clase + etiqueta + clase para ganarle
-   en especificidad a la regla ".page h3" del otro archivo,
-   que si no, se quedaba con la fuente Borel por encima de esta. */
 .page h3.titulo-proyecto1 {
   position: absolute;
   top: 44%;
@@ -957,7 +879,7 @@ transform: rotate(0deg);
   top: 0;
   left: 0;
 
-  opacity: 0;   /* oculta por defecto */
+  opacity: 0;  
 }
 
 .boton-libro:hover .boton-libro-normal {
@@ -969,15 +891,14 @@ transform: rotate(0deg);
 }
 .boton-libro-texto {
   position: absolute;
-  top: -1.5cqw;      /* encima del botón; súbelo o bájalo a tu gusto */
+  top: -1.5cqw;     
   left: 50%;
   transform: translateX(-50%);
 
-  z-index: 7;         /* por encima de las dos imágenes */
-
+  z-index: 7;        
   white-space: nowrap;
 
-  font-family: "Berkshire swash", cursive;  /* o la que uses en el resto del sitio */
+  font-family: "Berkshire swash", cursive; 
   font-size: 1cqw;
   color: rgb(51, 88, 122);
 
@@ -988,23 +909,22 @@ transform: rotate(0deg);
 .boton-libro:hover .boton-libro-texto {
   opacity: 1;
 }
+
 .boton-menu {
   position: absolute;
-  top: -12%;
+  top: -13%;
   left: 0%;
-
-  z-index: 15;        /* más alto que .background (z-index: 0) y que .elementos (z-index: 10) */
-
+  z-index: 15;
   cursor: pointer;
-  pointer-events: auto;   /* importante, ver nota abajo */
+  pointer-events: auto;
 }
 
 .boton-menu-img {
   width: 100cqw;
   height: auto;
   display: block;
-
-  transition: transform 0.3s ease, filter 0.3s ease;
+  filter: none;
+  transition: filter 0.4s ease;
 }
 
 .boton-menu:hover .boton-menu-img {
@@ -1020,31 +940,31 @@ transform: rotate(0deg);
 }
 .lista-proyecto2 {
   position: absolute;
-  top: 70%;           /* ajusta a donde quieras que empiece */
+  top: 70%;          
   left: 43%;
   transform: translateX(-50%);
   width: 70%;
 
   margin: 0;
-  padding-left: 1.2cqw;   /* espacio para que quepan los puntos */
+  padding-left: 1.2cqw;  
 
   font-family: "Berkshire Swash", serif;
   font-size: 0.85cqw;
   color: #1f1711;
 
-  list-style-type: disc;   /* el punto redondo de toda la vida */
+  list-style-type: disc;  
 }
 
 .lista-proyecto2 li {
-  margin-bottom: 0.3cqw;   /* separación entre líneas */
-  text-align: left;        /* las listas casi nunca se justifican, queda raro */
+  margin-bottom: 0.3cqw;   
+  text-align: left;       
 }
-.page p.sobremitexto {   /* en vez de .sobremitexto sola */
+.page p.sobremitexto {   
   position: absolute;
   top: 13%;
   left: 3%;
 
-  width: 40%;            /* ← esto es lo que faltaba, ajusta el % a tu gusto */
+  width: 40%;          
 
   margin: 0;
   padding-left: 1.2cqw;
