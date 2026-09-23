@@ -1,0 +1,182 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  >
+
+  <title>Sobre mi</title>
+
+  <!-- Fuentes: Borel y Berkshire Swash -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Borel&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+
+  <!-- ===================================================
+       ESTILOS PROPIOS DEL LIBRO ABIERTO (sin flip)
+       =================================================== -->
+  <style>
+    /* Contenedor que agrupa las dos páginas, una al lado
+       de la otra, como un libro abierto sobre la mesa */
+    .libro-abierto {
+      position: absolute;
+      top: 52%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+
+      width: 55cqw;
+      height: 70cqh;
+
+      display: flex;
+
+      pointer-events: auto;
+
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+    }
+
+    /* Cada página ocupa la mitad del ancho total */
+    .libro-abierto .page {
+      position: relative;
+      width: 50%;
+      height: 100%;
+
+      background: #fdfaf5;
+
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+
+      padding: 2cqw;
+      box-sizing: border-box;
+
+      overflow: visible;
+    }
+
+    /* Sombra suave hacia el centro, simulando el pliegue/lomo
+       del libro donde se unen ambas páginas */
+    .libro-abierto .page:first-child {
+      box-shadow: inset -12px 0 20px -12px rgba(0, 0, 0, 0.3);
+    }
+
+    .libro-abierto .page:last-child {
+      box-shadow: inset 12px 0 20px -12px rgba(0, 0, 0, 0.3);
+    }
+
+    .page .foto-proyecto {
+      width: 100%;
+      height: 45%;
+      object-fit: cover;
+      border-radius: 0.4cqw;
+      margin-bottom: 1cqw;
+    }
+
+    .page h3 {
+      margin: 0 0 0.5cqw 0;
+      font-family: "Borel", cursive;
+      font-size: 1.6cqw;
+      color: #222;
+      text-align: center;
+    }
+
+    .page p {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      font-size: 0.95cqw;
+      color: #444;
+      text-align: center;
+    }
+
+    .page .numero-pagina {
+      position: absolute;
+      bottom: 0.6cqw;
+      font-size: 0.8cqw;
+      color: #999;
+      font-family: Arial, sans-serif;
+    }
+
+    /* Botón de menú */
+    .boton-menu {
+      position: absolute;
+      top: 4%;
+      left: 4%;
+
+      z-index: 15;
+
+      cursor: pointer;
+      pointer-events: auto;
+    }
+
+    .boton-menu-img {
+      width: 5cqw;
+      height: auto;
+      display: block;
+
+      filter: none;
+      transition: filter 0.4s ease;
+    }
+
+    .boton-menu:hover .boton-menu-img {
+      filter:
+        drop-shadow(0 0 8px rgba(255, 180, 220, 0.6))
+        drop-shadow(0 0 25px rgba(255, 180, 220, 0.4));
+    }
+  </style>
+</head>
+
+<body>
+  <div class="scenediseno">
+
+    <!-- BACKGROUND -->
+    <img
+      src="assets/fondo-diseno-grafico.jpeg"
+      class="background"
+      alt=""
+    >
+
+    <!-- ELEMENTOS INTERACTIVOS -->
+    <div class="elementos">
+
+      <a href="index.html" class="boton-menu">
+        <img src="assets/menu.png" class="boton-menu-img" alt="Volver al home">
+      </a>
+
+      <div class="libro-abierto">
+
+        <div class="page">
+          <img src="assets/fotosobremi.png" class="foto-sobre-mi" alt="">
+          <p class="titulosobremi"> Sobre mi</p>
+          <p class="sobremitexto"> Soy Marta, diseñadora Gráfica especializada en productos Editoriales y Multimedia.
+Mi enfoque combina la estética visual con la funcionalidad, transformando conceptos abstractos en interfaces intuitivas que cautivan al usuario.
+Mi trayectoria se define por una mentalidad de crecimiento constante, soy una profesional autodidacta y curiosa, siempre a la vanguardia de nuevas metodologías</p>
+<ul class="lista-proyecto2">
+  <li>Diseño Editorial</li>
+  <li>Packaging</li>
+  <li>Diseño de publicidad</li>
+  <li>Preparación para impresión</li>
+  <li>Redes sociales</li>
+  <li>Diseño Web</li>
+  <li>Diseño y desarrollo de contenido e-learning</li>
+</ul>
+
+
+</div>
+
+        <div class="page">
+          <img src="assets/indice 2.png" class="foto-proyecto-3" alt="">
+          <img src="assets/cartel 1.png" class="cartel1" alt="">
+        </div>
+
+      </div>
+
+    </div>
+  </div>
+
+</body>
+</html>

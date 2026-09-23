@@ -1,0 +1,1057 @@
+/* =====================================================
+   CONFIGURACIÓN GENERAL
+   ===================================================== */
+
+html,
+body {
+  width: 100%;
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  overflow: hidden;
+  background: #000;
+}
+
+
+/* =====================================================
+   SCENE
+   ===================================================== */
+
+.scene {
+  position: fixed;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  width: 100vw;
+  width: 100dvw;
+
+  height: 100vh;
+  height: 100dvh;
+
+
+  max-width: calc(100vh * 1376 / 768);
+  max-width: calc(100dvh * 1376 / 768);
+
+  max-height: calc(100vw * 768 / 1376);
+  max-height: calc(100dvw * 768 / 1376);
+
+
+  container-type: size;
+  container-name: scene;
+}
+
+
+/* =====================================================
+   BACKGROUND
+   ===================================================== */
+
+.background {
+  display: block;
+
+  width: 100%;
+  height: 100%;
+
+  object-fit: cover;
+
+  z-index: 0;
+
+  pointer-events: none;
+  user-select: none;
+}
+
+
+/* =====================================================
+   ZONA DE ELEMENTOS
+   ===================================================== */
+
+.elementos {
+  position: absolute;
+
+  inset: 0;
+
+  width: 100%;
+  height: 100%;
+
+  z-index: 10;
+
+  pointer-events: none;
+}
+
+
+/* =====================================================
+   CONFIGURACIÓN COMÚN DE LOS ENLACES
+   ===================================================== */
+
+.Button-Diseno,
+.button-web,
+.button-contacto,
+.button-sobre-mi {
+  position: absolute;
+
+  z-index: 10;
+
+  cursor: pointer;
+
+  pointer-events: auto;
+
+  text-decoration: none;
+
+  color: inherit;
+}
+
+
+/* =====================================================
+   CONFIGURACIÓN COMÚN DE LAS IMÁGENES
+   ===================================================== */
+
+.Button-Diseno img,
+.button-web img,
+.button-contacto img,
+.button-sobre-mi img {
+  height: auto;
+
+  display: block;
+
+  /* Las imágenes NO tienen blur */
+  filter: none;
+
+  transition:
+    filter 0.5s ease,
+    transform 0.5s ease;
+}
+
+
+/* =====================================================
+   CONFIGURACIÓN COMÚN DE LOS TEXTOS
+   ===================================================== */
+
+.button-text,
+.texto-web,
+.texto-contacto,
+.button-sobre-mi span {
+  color: white;
+
+  font-family: "Borel", cursive;
+
+  font-size: 1.458cqw;
+
+  font-weight: 400;
+
+  white-space: nowrap;
+
+  opacity: 0.7;
+
+  
+  filter: blur(4px);
+
+  text-shadow:
+    0 0 10px rgba(255, 180, 220, 0.8),
+    0 0 20px rgba(255, 180, 220, 0.5);
+
+  transition:
+    opacity 0.5s ease,
+    filter 0.5s ease,
+    transform 0.5s ease;
+}
+
+
+/* =====================================================
+   DISEÑO GRÁFICO
+   ===================================================== */
+
+.Button-Diseno {
+  top: 84%;
+  left: 35%;
+
+  transform: translate(-50%, -50%);
+}
+
+.Button-Diseno img {
+  width: 10.417cqw;
+}
+
+.button-text {
+  position: absolute;
+
+  top: -1.563cqw;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  z-index: 20;
+}
+
+
+/* =====================================================
+   DISEÑO WEB / UI / UX
+   ===================================================== */
+
+.button-web {
+  top: 57%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+}
+
+.button-web img {
+  width: 23.438cqw;
+}
+
+.texto-web {
+  position: absolute;
+
+  top: -10%;
+  left: 52%;
+
+  transform: translateX(-50%);
+
+  z-index: 20;
+}
+
+
+/* =====================================================
+   CONTACTO
+   ===================================================== */
+
+.button-contacto {
+  top: 83%;
+  left: 65%;
+
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-contacto img {
+  width: 10.417cqw;
+}
+
+.texto-contacto {
+  display: block;
+
+  margin-top: 0.5cqw;
+
+  transform: none;
+}
+
+
+/* =====================================================
+   SOBRE MÍ
+   ===================================================== */
+
+.button-sobre-mi {
+  top: 80%;
+  left: 75%;
+
+  transform: translate(-50%, -50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.button-sobre-mi img {
+  width: 10.417cqw;
+}
+
+.button-sobre-mi span {
+  margin-top: 0.5cqw;
+
+  display: block;
+
+  transform: none;
+}
+
+
+/* =====================================================
+   HOVER — IMÁGENES
+   ===================================================== */
+
+.Button-Diseno:hover img,
+.button-web:hover img,
+.button-contacto:hover img,
+.button-sobre-mi:hover img {
+  filter:
+    drop-shadow(
+      0 0 8px rgba(255, 180, 220, 0.6)
+    )
+    drop-shadow(
+      0 0 25px rgba(255, 180, 220, 0.4)
+    );
+
+  transform: scale(1.04);
+}
+
+
+/* =====================================================
+   HOVER — TEXTOS
+   ===================================================== */
+
+.Button-Diseno:hover .button-text,
+.button-web:hover .texto-web,
+.button-contacto:hover .texto-contacto,
+.button-sobre-mi:hover span {
+  opacity: 1;
+
+  filter: blur(0);
+}
+
+
+/* =====================================================
+   HOVER — DISEÑO GRÁFICO
+   ===================================================== */
+
+.Button-Diseno:hover .button-text {
+  transform:
+    translateX(-50%)
+    scale(1.04);
+}
+
+
+/* =====================================================
+   HOVER — DISEÑO WEB
+   ===================================================== */
+
+.button-web:hover .texto-web {
+  transform:
+    translateX(-50%)
+    scale(1.04);
+}
+
+
+/* =====================================================
+   HOVER — CONTACTO
+   ===================================================== */
+
+.button-contacto:hover .texto-contacto {
+  transform: scale(1.04);
+}
+
+
+/* =====================================================
+   HOVER — SOBRE MÍ
+   ===================================================== */
+
+.button-sobre-mi:hover span {
+  transform: scale(1.04);
+}
+
+/* =====================================================
+   ESCENA — PÁGINA DISEÑO GRÁFICO
+   ===================================================== */
+
+.scenediseno {
+ position: fixed;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  width: 100vw;
+  width: 100dvw;
+
+  height: 100vh;
+  height: 100dvh;
+
+
+  max-width: calc(100vh * 1376 / 768);
+  max-width: calc(100dvh * 1376 / 768);
+
+  max-height: calc(100vw * 768 / 1376);
+  max-height: calc(100dvw * 768 / 1376);
+
+
+  container-type: size;
+  container-name: scene;
+}
+
+
+/* =====================================================
+   ZONA DE ELEMENTOS (tarjetas)
+   ===================================================== */
+
+.elementos {
+  position: absolute;
+  inset: 0;
+  z-index: 10;
+  pointer-events: none;
+}
+
+
+/* =====================================================
+   TARJETAS CON FLIP
+   ===================================================== */
+
+.tarjeta {
+  position: absolute;
+  perspective: 1500px;
+  cursor: pointer;
+  pointer-events: auto;
+}
+
+.tarjeta-izquierda { top: 51%; left: 38%; width: 25cqw; height: 55cqh; transform: translate(-50%, -50%); }
+.tarjeta-derecha   { top: 51%; left: 63%; width: 26cqw; height: 55cqh; transform: translate(-50%, -50%); }
+
+.tarjeta-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.7s;
+  transform-style: preserve-3d;
+}
+
+.tarjeta.girada .tarjeta-inner {
+  transform: rotateY(180deg);
+}
+
+.cara {
+  position: absolute;
+  inset: 0;
+  backface-visibility: hidden;
+}
+
+.cara-frente img.papel {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.cara-trasera {
+  transform: rotateY(180deg);
+  background: #fff;
+  border-radius: 0.5cqw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  padding: 1cqw;
+  overflow: hidden;
+}
+
+.cara-trasera .foto-proyecto {
+  width: 100%;
+  height: 55%;
+  object-fit: cover;
+  border-radius: 0.3cqw;
+  margin-bottom: 0.6cqw;
+}
+.foto-proyecto-portada {
+  width: 100%;
+  height: 110%;
+  object-fit: cover;
+  border-radius: 0.3cqw;
+  margin-bottom: 0.6cqw;
+}
+.foto-proyecto-2 {
+  width: 100%;
+  height: 110%;
+  object-fit: cover;
+  border-radius: 0.3cqw;
+  margin-bottom: 0.6cqw;
+}
+.foto-proyecto-3 {
+  width: 100%;
+  height: 55%;
+  object-fit: cover;
+  border-radius: 0.3cqw;
+  margin-bottom: 0.5cqw;
+}
+.fondo-proyecto1 {
+  position: absolute;
+
+  width: 109%;
+  height: 50%;
+  object-fit: cover;
+  top: 0%;
+  left: 0%;
+}
+.foto-proyecto-4 {
+  position: absolute;   /* ← esto es lo que falta */
+
+  width: 40%;
+  height: 80%;
+  object-fit: cover;
+  border-radius: 0.3cqw;
+  margin-bottom: 0.5cqw;
+  top: 10%;
+  left: 0%;
+}
+.foto-proyecto-5 {
+  position: absolute;   /* ← esto es lo que falta */
+
+  width: 78%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 0.3cqw;
+  margin-bottom: 0.5cqw;
+  top: 4%;
+  left: 24%;
+}
+.cartel1 {
+  position: absolute;
+  top: 27cqw;
+  left: 3cqw;
+
+  width: 30cqw;
+  height: auto;
+
+  transform: rotate(-6deg);
+
+  border-radius: none;
+
+  z-index: 5;
+}
+
+.cara-trasera h3 {
+  margin: 0 0 0.3cqw 0;
+  font-size: 1.2cqw;
+  font-family: "Borel", cursive;
+}
+
+.cara-trasera p {
+  margin: 0;
+  font-size: 0.9cqw;
+  font-family: Arial, sans-serif;
+  color: #333;
+  text-align: center;
+}
+.papel{
+ position: fixed;
+
+  top: 50%;
+  left: 50%;
+
+  transform: translate(-50%, -50%);
+
+  width: 100vw;
+  width: 100dvw;
+
+  height: 600vh;
+  height: 600dvh;
+
+
+  max-width: calc(100vh * 1376 / 768);
+  max-width: calc(100dvh * 1376 / 768);
+
+  max-height: calc(100vw * 768 / 1376);
+  max-height: calc(100dvw * 768 / 1376);
+
+
+  container-type: size;
+  container-name: scene;
+}
+
+/* Antes: .titulo-proyecto1
+   Ahora combinamos clase + etiqueta + clase para ganarle
+   en especificidad a la regla ".page h3" del otro archivo,
+   que si no, se quedaba con la fuente Borel por encima de esta. */
+.page h3.titulo-proyecto1 {
+  position: absolute;
+  top: 44%;
+  left: 30%;
+  transform: translateX(-50%);
+
+  z-index: 2;
+
+  margin: 0;
+  font-family: "Berkshire Swash", serif;
+  font-size: 1.8cqw;
+  color: #6d5b4e;
+  text-shadow: 0 1px 4px rgba(255, 255, 255, 0.85);
+}
+
+.page p.descripcion-proyecto1 {
+  position: absolute;
+  top: 52%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+
+  margin: 0;
+  font-family: "Berkshire Swash", serif;
+  font-size: 1.0cqw;
+  color: #1f1711;
+  text-align: justify;
+}
+.foto-proyecto-ig {
+  position: absolute;
+  top: 2%;
+  left: -3%;
+
+  width: 60%;
+  height: 45%;
+  object-fit: cover;
+}
+
+.foto-proyecto-ig2 {
+  position: absolute;
+  bottom: 2%;
+  right: -4%;
+
+  width: 60%;
+  height: 45%;
+  object-fit: cover;
+}
+
+.pegatina-loca {
+  position: absolute;
+  top: 8%;
+  right: 2%;
+
+  width: 45%;
+  height: auto;
+}
+
+.pegatina-2 {
+  position: absolute;
+  bottom: 8%;
+  left: 2%;
+
+  width: 50%;
+  height: auto;
+}
+.fondo-proyecto2 {
+  position: absolute;
+
+  width: 100%;
+  height: 44%;
+  object-fit: cover;
+  top: 0%;
+  left: 0%;
+}
+.foto-proyecto-t-l {
+  position: absolute;
+
+  width: 100%;
+  height: 44%;
+  object-fit: cover;
+  top: 40%;
+  left: -2%;
+}
+.foto-proyecto-t-color {
+  position: absolute;
+
+  width: 100%;
+  height: 24%;
+  object-fit: cover;
+  top: 75%;
+  left: 0%;
+}
+.page h3.titulo-proyecto2{
+  position: absolute;
+  top: 4%;
+  left: 32%;
+  transform: translateX(-50%);
+
+  z-index: 2;
+
+  margin: 0;
+  font-family: "Berkshire Swash", serif;
+  font-size: 2.5cqw;
+  color: #8b7d3b;
+}
+
+.page p.descripcion-proyecto2 {
+  position: absolute;
+  top: 15%;
+  left: 45%;
+  transform: translateX(-50%);
+  width: 80%;
+
+  margin: 0;
+  font-family: "Berkshire Swash", serif;
+  font-size: 1cqw;
+  color: #1f1711;
+  text-align: justify;
+}
+.cartel-2 {
+  position: absolute;
+  top: 25cqw;
+  left: 3cqw;
+
+  width: 20cqw;
+  height: auto;
+
+transform: rotate(25deg);
+  border-radius: none;
+
+  z-index: 5;
+}
+.foto-tonali-1{
+  position: absolute;
+
+  width: 50%;
+  height: 70%;
+  object-fit: cover;
+  top: 30%;
+  left: 1%;
+}
+.foto-tonali-2{
+ position: absolute;
+  bottom: 20%;
+  right: 0%;
+
+  width: 50%;
+  height: 70%;
+  object-fit: cover;
+}
+.tarjetavisita {
+  position: absolute;
+  top: 40%;
+  left: 0cqw;
+
+  width: 40cqw;
+  height: auto;
+
+transform: rotate(0deg);
+  border-radius: none;
+
+  z-index: 5;
+}
+.foto-proyecto-t {
+  position: absolute;
+
+  width: 80%;
+  height: 50%;
+  object-fit: cover;
+  top: 0%;
+  left: 10%;
+}
+.foto-proyecto3{
+  position: absolute;
+
+  width: 105%;
+  height: 90%;
+  object-fit: cover;
+  top: 0%;
+  left: 8%;
+}
+.foto-proyecto-batllo{
+  position: absolute;
+
+  width: 105%;
+  height: 90%;
+  object-fit: cover;
+  top: 0%;
+  left: 8%;
+}
+.foto-proyecto-t{
+  position: absolute;
+
+  width: 90%;
+  height: 60%;
+  object-fit: cover;
+  top: 0%;
+  left: 8%;
+}
+.foto-proyecto-batlló{
+  position: absolute;
+
+  width: 115%;
+  height: 90%;
+  object-fit: cover;
+  top: 5%;
+  left: 0%;
+}
+.page h3.titulo-proyecto-3{
+  position: absolute;
+  top: 10%;
+  left: 40%;
+  transform: translateX(-50%);
+
+  z-index: 2;
+
+  margin: 0;
+  font-family: "Berkshire Swash", serif;
+  font-size: 1.8cqw;
+  color: #24205e;
+}
+
+.page p.descripcion-proyecto-3 {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+
+  margin: 0;
+  font-family: "Times new roman";
+  font-size: 1.2cqw;
+  color: #1f1711;
+  text-align: justify;
+}
+.page p.descripcion-proyecto-3-p2 {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+
+  margin: 0;
+  font-family: "Times new roman";
+  font-size: 0.85cqw;
+  color: #1f1711;
+  text-align: justify;
+}
+.page p.descripcion-proyecto-3-p3 {
+  position: absolute;
+  top: 60%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+
+  margin: 0;
+  font-family: "Times new roman";
+  font-size: 0.85cqw;
+  color: #1f1711;
+  text-align: justify;
+}
+.page h3.titulo-proyecto-4{
+  position: absolute;
+  top: 50%;
+  left: 40%;
+  transform: translateX(-50%);
+
+  z-index: 2;
+
+  margin: 0;
+  font-family: "Berkshire Swash", serif;
+  font-size: 1.8cqw;
+  color: #24205e;
+}
+.foto-proyecto-mookup{
+  position: absolute;
+
+  width: 100%;
+  height: 40%;
+  object-fit: cover;
+  top: 50%;
+  left: 0%;
+}
+.foto-proyecto-batlló-2-carteles{
+  position: absolute;
+
+  width: 95%;
+  height: 80%;
+  object-fit: cover;
+  top: 5%;
+  left: 0%;
+}
+.foto-proyecto-ed{
+  position: absolute;
+
+  width: 120%;
+  height: 90%;
+  object-fit: cover;
+  top: 3%;
+  left: 5%;
+}
+.page h3.titulo-proyecto-ed{
+  position: absolute;
+  top: 10%;
+  left: 35%;
+  transform: translateX(-50%);
+
+  z-index: 2;
+
+  margin: 0;
+  font-family: "Berkshire Swash", serif;
+  font-size: 1.5cqw;
+  color: #24205e;
+}
+
+.page p.descripcion-proyecto-ed {
+  position: absolute;
+  top: 30%;
+  left: 45%;
+  transform: translateX(-50%);
+  width: 80%;
+
+  margin: 0;
+  font-family: "Times new roman";
+  font-size: 1.2cqw;
+  color: #1f1711;
+  text-align: justify;
+}
+.foto-proyecto-ed-mockup{
+  position: absolute;
+
+  width: 80%;
+  height: 60%;
+  object-fit: cover;
+  top: 35%;
+  left: 5%;
+}
+.foto-proyecto-bestiario{
+  position: absolute;
+
+  width: 110%;
+  height: 90%;
+  object-fit: cover;
+  top: 3%;
+  left: 5%;
+}
+.page p.descripcion-proyecto-bestiario {
+  position: absolute;
+  top: 25%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80%;
+
+  margin: 0;
+  font-family: "Times new roman";
+  font-size: 0.85cqw;
+  color: #1f1711;
+  text-align: justify;
+}
+.foto-proyecto-bestiario-2{
+  position: absolute;
+
+  width: 95%;
+  height: 90%;
+  object-fit: cover;
+  top: 3%;
+  left: 5%;
+}
+.foto-fin {
+  width: 100%;
+  height: 90%;
+  object-fit: cover;
+  border-radius: 0.3cqw;
+  margin-bottom: 0.6cqw;
+  top: 3%
+}
+.boton-libro {
+  position: absolute;
+  top: 30%;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: 15cqw;
+
+  display: block;
+  z-index: 6;
+
+  cursor: pointer;
+}
+
+.boton-libro-normal,
+.boton-libro-hover {
+  width: 100%;
+  height: auto;
+  display: block;
+
+  transition: opacity 0.3s ease;
+}
+
+.boton-libro-hover {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  opacity: 0;   /* oculta por defecto */
+}
+
+.boton-libro:hover .boton-libro-normal {
+  opacity: 0;
+}
+
+.boton-libro:hover .boton-libro-hover {
+  opacity: 1;
+}
+.boton-libro-texto {
+  position: absolute;
+  top: -1.5cqw;      /* encima del botón; súbelo o bájalo a tu gusto */
+  left: 50%;
+  transform: translateX(-50%);
+
+  z-index: 7;         /* por encima de las dos imágenes */
+
+  white-space: nowrap;
+
+  font-family: "Berkshire swash", cursive;  /* o la que uses en el resto del sitio */
+  font-size: 1cqw;
+  color: rgb(51, 88, 122);
+
+  opacity: 0.7;
+  transition: opacity 0.3s ease;
+}
+
+.boton-libro:hover .boton-libro-texto {
+  opacity: 1;
+}
+.boton-menu {
+  position: absolute;
+  top: -12%;
+  left: 0%;
+
+  z-index: 15;        /* más alto que .background (z-index: 0) y que .elementos (z-index: 10) */
+
+  cursor: pointer;
+  pointer-events: auto;   /* importante, ver nota abajo */
+}
+
+.boton-menu-img {
+  width: 100cqw;
+  height: auto;
+  display: block;
+
+  transition: transform 0.3s ease, filter 0.3s ease;
+}
+
+.boton-menu:hover .boton-menu-img {
+  filter:
+    drop-shadow(0 0 8px rgba(255, 180, 220, 0.6))
+    drop-shadow(0 0 25px rgba(255, 180, 220, 0.4));
+}
+.foto-sobre-mi {
+  position: absolute;
+  top: 10%;
+  right: 3%;
+  width: 45%;
+}
+}
+.lista-proyecto2 {
+  position: absolute;
+  top: 70%;           /* ajusta a donde quieras que empiece */
+  left: 43%;
+  transform: translateX(-50%);
+  width: 70%;
+
+  margin: 0;
+  padding-left: 1.2cqw;   /* espacio para que quepan los puntos */
+
+  font-family: "Berkshire Swash", serif;
+  font-size: 0.85cqw;
+  color: #1f1711;
+
+  list-style-type: disc;   /* el punto redondo de toda la vida */
+}
+
+.lista-proyecto2 li {
+  margin-bottom: 0.3cqw;   /* separación entre líneas */
+  text-align: left;        /* las listas casi nunca se justifican, queda raro */
+}
+.page p.sobremitexto {   /* en vez de .sobremitexto sola */
+  position: absolute;
+  top: 13%;
+  left: 3%;
+
+  width: 40%;            /* ← esto es lo que faltaba, ajusta el % a tu gusto */
+
+  margin: 0;
+  padding-left: 1.2cqw;
+
+  font-family: "Berkshire Swash", serif;
+  font-size: 0.5cqw;
+  color: #1f1711;
+  text-align: justify;
+}
