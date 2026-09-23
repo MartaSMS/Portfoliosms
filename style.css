@@ -1254,7 +1254,7 @@ transform: rotate(0deg);
   left: 50%;
   transform: translateX(50%);
 
-  z-index: 20;
+  z-index: 100;
 }
 .pestana-home:hover .pestana-home {
   filter:
