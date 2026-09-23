@@ -1247,3 +1247,11 @@ transform: rotate(0deg);
   cursor: pointer;
   pointer-events: auto;   /
 }
+.pestana-home {
+  position: absolute;
+  top: -8%;      /* negativo y bastante grande, para que solo asome un poco */
+  left: 50%;
+  transform: translateX(-50%);
+
+  z-index: 20;
+}
