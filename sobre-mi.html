@@ -10,8 +10,7 @@
   >
 
   <title>Sobre mi</title>
-  <link rel="icon" type="png" href="assets/logomarta.png">
-
+  <link rel="icon" type="image/png" href="assets/logomarta.png">
   <!-- Fuentes: Borel y Berkshire Swash -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,9 +18,8 @@
 
   <link rel="stylesheet" href="style.css">
 
- 
+
   <style>
-  
     .libro-abierto {
       position: absolute;
       top: 52%;
@@ -38,7 +36,7 @@
       box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
     }
 
- 
+    
     .libro-abierto .page {
       position: relative;
       width: 50%;
@@ -57,7 +55,6 @@
       overflow: visible;
     }
 
-    
     .libro-abierto .page:first-child {
       box-shadow: inset -12px 0 20px -12px rgba(0, 0, 0, 0.3);
     }
@@ -98,7 +95,7 @@
       font-family: Arial, sans-serif;
     }
 
-
+    /* Botón de menú */
     .boton-menu {
       position: absolute;
       top: 4%;
@@ -111,10 +108,9 @@
     }
 
     .boton-menu-img {
-      width: 100cqw;
+      width: 5cqw;
       height: auto;
       display: block;
-      top: -20%;
 
       filter: none;
       transition: filter 0.4s ease;
@@ -131,15 +127,19 @@
 <body>
   <div class="scenediseno">
 
-    
+    <!-- BACKGROUND -->
     <img
       src="assets/fondo-diseno-grafico.jpeg"
       class="background"
       alt=""
     >
 
-
+    <!-- ELEMENTOS INTERACTIVOS -->
     <div class="elementos">
+
+      <a href="index.html" class="boton-menu">
+  <img src="assets/menu.png" class="boton-menu-img-sm" alt="Volver al home">
+</a>
       <div class="libro-abierto">
 
         <div class="page">
