@@ -10,14 +10,17 @@
   >
 
   <title>Diseño Gráfico</title>
-  <link rel="icon" type="png" href="assets/logomarta.png">
-
+  <link rel="icon" type="image/png" href="assets/logomarta.png">
+  <!-- Fuentes: Borel y Berkshire Swash -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Borel&display=swap" rel="stylesheet">
 
   <link rel="stylesheet" href="style.css">
 
+  <!-- ===================================================
+       ESTILOS PROPIOS DEL FLIPBOOK
+       =================================================== -->
   <style>
     .libro-wrapper {
       position: absolute;
@@ -55,7 +58,7 @@
 
     .page .foto-proyecto {
   width: 100%;
-  height: 45%;  
+  height: 45%;   
   object-fit: cover;
   border-radius: 0.4cqw;
   margin-bottom: 1cqw;
@@ -90,14 +93,14 @@
 <body>
   <div class="scenediseno">
 
-
+    <!-- BACKGROUND -->
     <img
       src="assets/fondo-diseno-grafico.jpeg"
       class="background"
       alt=""
     >
 
-
+    <!-- ELEMENTOS INTERACTIVOS -->
     <div class="elementos">
 
       <a href="index.html" class="boton-menu">
@@ -291,7 +294,6 @@ Diseño Editorial</h3>
   });
 
   pageFlip.loadFromHTML(document.querySelectorAll('.page'));
-
 
   window.addEventListener('resize', () => {
     pageFlip.update();
