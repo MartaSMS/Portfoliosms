@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  >
+
+  <title>Diseño Web / UI / UX</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/logomarta.png">
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Borel&display=swap" rel="stylesheet">
+
+  
+  <link rel="stylesheet" href="style.css">
+
+  <style>
+    
+    .escena-ux {
+      position: fixed;
+
+      top: 50%;
+      left: 50%;
+
+      transform: translate(-50%, -50%);
+
+      width: 100vw;
+      width: 100dvw;
+
+      height: 100vh;
+      height: 100dvh;
+
+      max-width: calc(100vh * 1440 / 1024);
+      max-width: calc(100dvh * 1440 / 1024);
+
+      max-height: calc(100vw * 1024 / 1440);
+      max-height: calc(100dvw * 1024 / 1440);
+
+      container-type: size;
+      container-name: escena-ux;
+    }
+
+    .ventana-navegador {
+      position: absolute;
+
+      left: 8.681%;
+      top: 15.918%;
+      width: 88.264%;
+      height: 60.156%;
+
+      background: #35363a;      
+
+      overflow-y: auto;
+      overflow-x: hidden;
+
+      pointer-events: auto;     
+
+      
+      scrollbar-width: thin;
+      scrollbar-color: #5f6368 #35363a;
+    }
+
+    .web-interior {
+      box-sizing: border-box;
+      min-height: 100%;
+
+      padding: 1.5cqw 4cqw;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      font-family: "Berkshire Swash", serif;
+    }
+
+    .rejilla-proyectos {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      gap: 7cqw;
+    }
+
+
+    .proyecto-ux {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      text-decoration: none;
+      cursor: pointer;
+    }
+
+    .proyecto-ux-img {
+      display: block;
+
+      height: 33cqw;
+      width: auto;
+
+      transition: filter 0.4s ease;
+    }
+
+    .proyecto-ux-hueco {
+      width: 15.87cqw;           
+      background: #4a4b50;
+      border-radius: 1.8cqw;
+    }
+
+    .proyecto-ux-nombre {
+      margin-top: 0.8cqw;
+
+      font-size: 1.3cqw;
+      color: #bdc1c6;
+
+      transition: color 0.4s ease;
+    }
+
+    .proyecto-ux:hover .proyecto-ux-img {
+      filter:
+        drop-shadow(0 0 8px rgba(255, 180, 220, 0.6))
+        drop-shadow(0 0 25px rgba(255, 180, 220, 0.4));
+    }
+
+    .proyecto-ux:hover .proyecto-ux-nombre {
+      color: #ffffff;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="escena-ux">
+
+
+    <img
+      src="assets/fondodiseñoux.png"
+      class="background"
+      alt=""
+    >
+
+    <div class="elementos">
+
+    <a href="index.html" class="boton-menu">
+  <img src="assets/menu.png" class="boton-menu-img" alt="Volver al home">
+</a>
+
+      
+      <div class="ventana-navegador">
+        <div class="web-interior">
+
+          <div class="rejilla-proyectos">
+
+            <!-- PROYECTO 1 -->
+            <a href="vetnova.html" class="proyecto-ux">
+              <img
+                src="assets/vetnobaportada.png"
+                class="proyecto-ux-img"
+                alt="VetNova"
+              >
+              <span class="proyecto-ux-nombre">VetNova</span>
+            </a>
+
+            <!-- PROYECTO 2 -->
+           <a href="museodelprado.html" class="proyecto-ux">
+              <img
+                src="assets/museodelprado.png"
+                class="proyecto-ux-img"
+                alt="museo del prado"
+              >
+              <span class="proyecto-ux-nombre"> Museo del prado </span>
+            </a>
+
+            <!-- PROYECTO 3  -->
+           <a href="tonali.html" class="proyecto-ux">
+              <img
+                src="assets/tonaliapp.png"
+                class="proyecto-ux-img"
+                alt="tonali"
+              >
+              <span class="proyecto-ux-nombre"> Tonali </span>
+            </a>
+          </div>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

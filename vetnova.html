@@ -1,0 +1,523 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  >
+
+  <title>VetNova</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/faviconvetnova.png">
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Borel&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+
+  <!-- CSS general + base común del monitor/navegador -->
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="ux.css">
+
+  <style>
+
+    .ventana-navegador {
+      background: #ebdfd9;
+
+      scroll-behavior: smooth;                 
+      scrollbar-width: thin;
+      scrollbar-color: #a12740 #FC94A9;       
+    }
+
+    .vn {
+      --alto-ventana: 42.78cqw;
+      --alto-barra: 3.4cqw;
+
+      font-family: "Nunito", sans-serif;
+      color: #3a3a3a;
+    }
+    .vn-barra {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+
+      box-sizing: border-box;
+      height: var(--alto-barra);
+      padding: 0 3cqw;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      background: #ffd6de;
+      border-bottom: 0.1cqw solid rgba(0, 0, 0, 0.07);
+    }
+
+    .vn-barra a {
+      font-size: 0.9cqw;
+      font-weight: 700;
+      color: #16706d;
+      text-decoration: none;
+
+      transition: color 0.3s ease;
+    }
+
+    .vn-barra a:hover { color: #FD6459; }
+
+    .vn-enlaces {
+      display: flex;
+      gap: 2cqw;
+    }
+
+    .vn-hero {
+      box-sizing: border-box;
+      height: calc(var(--alto-ventana) - var(--alto-barra));
+      padding: 0 6cqw;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 4cqw;
+
+      position: relative;
+    }
+
+    .vn-hero-texto { flex: 1; }
+
+    .vn-etiqueta {
+      margin: 0 0 0.6cqw;
+
+      font-size: 0.9cqw;
+      font-weight: 800;
+      letter-spacing: 0.15cqw;
+      text-transform: uppercase;
+      color: #065567;
+    }
+
+    .vn-titulo {
+      margin: 0 0 1cqw;
+
+      font-size: 4.5cqw;
+      font-weight: 800;
+      line-height: 1;
+      color: #FC94A9;
+    }
+
+    .vn-lead {
+      margin: 0;
+      max-width: 32cqw;
+
+      font-size: 1.15cqw;
+      line-height: 1.55;
+    }
+
+    .vn-movil {
+      display: block;
+      height: 33cqw;
+      width: auto;
+    }
+    .vn-bajar {
+      position: absolute;
+      left: 50%;
+      bottom: 1.2cqw;
+      transform: translateX(-50%);
+
+      font-size: 0.85cqw;
+      font-weight: 700;
+      color: #065567;
+      text-decoration: none;
+
+      animation: rebote 1.6s ease-in-out infinite;
+    }
+
+    @keyframes rebote {
+      0%, 100% { transform: translate(-50%, 0); }
+      50%      { transform: translate(-50%, 0.5cqw); }
+    }
+
+
+    .vn-seccion {
+      padding: 4cqw 6cqw;
+      scroll-margin-top: var(--alto-barra);
+    }
+
+    .vn-seccion h2 {
+      margin: 0 0 1.2cqw;
+
+      font-size: 2cqw;
+      font-weight: 800;
+      color: #065567;
+    }
+
+    .vn-seccion p {
+      margin: 0;
+      max-width: 55cqw;
+
+      font-size: 1.05cqw;
+      line-height: 1.65;
+    }
+
+  
+    .vn-paleta {
+      display: flex;
+      gap: 1.5cqw;
+    }
+
+    .vn-color {
+      width: 9cqw;
+
+      font-size: 0.8cqw;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .vn-color::before {
+      content: "";
+      display: block;
+      height: 5cqw;
+      margin-bottom: 0.5cqw;
+
+      background: var(--c);
+      border-radius: 1cqw;
+      box-shadow: inset 0 0 0 0.1cqw rgba(0, 0, 0, 0.12);
+    }
+
+    
+    .vn-pantallas {
+      display: flex;
+      gap: 2.5cqw;
+    }
+
+    .vn-pantalla {
+      width: 15.87cqw;           
+      aspect-ratio: 175 / 364;
+
+      background: #f8f1d6;
+      border-radius: 1.8cqw;
+    }
+
+    
+    .vn-final {
+      padding: 4cqw 6cqw 5cqw;
+      text-align: center;
+    }
+
+    .vn-final p {
+      margin: 0 0 1cqw;
+
+      font-size: 1.3cqw;
+      font-weight: 800;
+      color: #FC94A9;
+    }
+
+    .vn-final a {
+      font-size: 1cqw;
+      font-weight: 700;
+      color: #065567;
+      text-decoration: none;
+    }
+
+    .vn-final a:hover { color: #FD6459; }
+
+ 
+    .vn-seccion p.vn-intro {
+      margin-bottom: 2cqw;
+    }
+
+    .vn-tarjetas {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.8cqw;
+    }
+
+    .vn-tarjeta {
+      padding: 1.6cqw;
+
+      background: #FFFBF9;
+      border: 0.1cqw solid rgba(252, 148, 169, 0.4);
+      border-radius: 1.2cqw;
+    }
+
+    .vn-tarjeta h3 {
+      margin: 0 0 0.4cqw;
+
+      font-size: 1.3cqw;
+      font-weight: 800;
+      color: #065567;
+    }
+
+
+    .vn-tarjeta h4,
+    .vn-conclusion h4 {
+      margin: 1cqw 0 0.3cqw;
+
+      font-size: 0.75cqw;
+      font-weight: 800;
+      letter-spacing: 0.1cqw;
+      text-transform: uppercase;
+      color: #a12740;
+    }
+
+    .vn-seccion .vn-tarjeta p,
+    .vn-seccion .vn-conclusion p {
+      max-width: none;
+
+      font-size: 0.95cqw;
+      line-height: 1.55;
+    }
+
+    .vn-conclusion {
+      margin-top: 2cqw;
+      padding: 1.4cqw 2cqw;
+
+      background: #ffeff2;
+      border-left: 0.4cqw solid #FC94A9;
+      border-radius: 0 1cqw 1cqw 0;
+    }
+
+    .vn-conclusion h4 { margin-top: 0; }
+
+
+    .vn-web-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2.2cqw;
+    }
+
+    .vn-web { margin: 0; }
+
+    .vn-web-pantalla {
+      aspect-ratio: 16 / 10;
+
+      background: #f8f1d6;       
+      border-radius: 0.8cqw;
+    }
+
+    
+    .vn-web-img {
+      display: block;
+      width: 100%;
+      height: auto;
+
+      border-radius: 0.8cqw;
+      box-shadow: 0 0.4cqw 1.2cqw rgba(6, 85, 103, 0.15);
+    }
+
+    .vn-web figcaption {
+      margin-top: 0.6cqw;
+
+      font-size: 0.85cqw;
+      font-weight: 700;
+      text-align: center;
+      color: #065567;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="escena-ux">
+
+    
+    <img
+      src="assets/fondodiseñoux.png"
+      class="background"
+      alt=""
+    >
+
+    <div class="elementos">
+
+
+      <div class="ventana-navegador">
+        <div class="vn">
+
+          <!-- BARRA FIJA -->
+          <nav class="vn-barra">
+            <a href="ui-ux.html">← Volver a proyectos</a>
+            <div class="vn-enlaces">
+              <a href="#sobre">Sobre el proyecto</a>
+              <a href="#competencia">Competencia</a>
+              <a href="#paleta">Paleta</a>
+              <a href="#pantallas">Pantallas</a>
+              <a href="#web">Versión web</a>
+              <a href="#iteraciones">Iteraciones</a>
+            </div>
+          </nav>
+
+          <!-- CABECERA -->
+          <header class="vn-hero">
+            <div class="vn-hero-texto">
+              <p class="vn-etiqueta">App móvil · Diseño Web · UX / UI</p>
+              <h1 class="vn-titulo">VetNova</h1>
+              <p class="vn-lead">
+                El mejor cuidado para tu mascota. VetNova es una clínica veterinaria centrada en el bienestar de los animales y de sus dueños, y para ello se diseñó una Web y aplicación destinada a conectar con el usuario.
+El principal cometido es que los usuarios tengan el mayor acceso posible a los datos médicos de sus mascotas y puedan administrarlos con facilidad.
+              </p>
+            </div>
+
+            <img src="assets/vetnobaportada.png" class="vn-movil" alt="VetNova">
+
+            <a href="#sobre" class="vn-bajar">Desliza ↓</a>
+          </header>
+
+          <!-- SOBRE EL PROYECTO -->
+          <section class="vn-seccion" id="sobre">
+            <h2>Sobre el proyecto</h2>
+            <p>
+             Diseñar una página web y una aplicación que permitan a los usuarios no solo solicitar citas veterinarias, sino también acceder, gestionar y trasladar el historial médico de sus mascotas de forma sencilla y segura, facilitando la continuidad de la atención incluso en casos de mudanza o cambio de clínica.
+            </p>
+          </section>
+
+          <!-- ANÁLISIS DE LA COMPETENCIA -->
+          <section class="vn-seccion" id="competencia">
+            <h2>Análisis de la competencia</h2>
+            <p class="vn-intro">
+              Antes de iniciar el diseño, llevé a cabo un análisis de la competencia para entender cómo las clínicas veterinarias actuales gestionan sus servicios digitales. 
+Analicé tanto páginas web como aplicaciones móviles, centrándome en sus flujos de usuario, estructura y funcionalidades principales. También revisé reseñas y comentarios de usuarios para identificar necesidades, problemas recurrentes y oportunidades de mejora en la experiencia.
+            </p>
+
+            <div class="vn-tarjetas">
+
+              <article class="vn-tarjeta">
+                <h3>PetDesk</h3>
+                <h4>Qué hacen bien</h4>
+                <p> Centralizan la información sanitaria facilitando la gestión y confirmación de citas. Tiene un buen sistema de recordatorios de vacunas y tratamientos y tambien permite tanto acceso a documentación médica como comunicación con la clínica.</p>
+                <h4>Qué se puede mejorar</h4>
+                <p>Algunas funciones dependen de que la clínica en especifico trabaje con esta app. La experiencia puede variar segun el centro y la cantidad de consultas puede ser frustrante para el usuario</p>
+              </article>
+
+              <article class="vn-tarjeta">
+                <h3>VitusNet</h3>
+                <h4>Qué hacen bien</h4>
+                <p> Puedes personalizar la identidad de cada clínica, acceso permanente a los historiales medicos, recordatorios automatizados de citas y tratamientos, integración con sistemas de gestión veterinaria.</p>
+                <h4>Qué se puede mejorar</h4>
+                <p>Se trata de una app con varias clinicas de diferentes marcas por lo que puede generar confusión, la gestion de citas requiere intervencion del personal y su utilidad va en funcion de clinicas que esten alojadas en la app.</p>
+              </article>
+
+              <article class="vn-tarjeta">
+                <h3>11 pets</h3>
+                <h4>Qué hacen bien</h4>
+                <p> Registro detallado del historial sanitario y gestion de medicamentos y tratamientos. Tiene recordatorio de vacunas, cuidados y puedes compartir la información con veterinarios y cuidadores</p>
+                <h4>Qué se puede mejorar</h4>
+                <p> Al tratarse de una app de cuidado, no hay una comunicación con la clínica por lo que la gestión seria externa. La introduccion manual de informacion es por parte del propietario del animal.</p>
+              </article>
+
+            </div>
+
+            <div class="vn-conclusion">
+              <h4>Oportunidad para VetNova</h4>
+              <ul>
+                <li>Centralización de servicios: Reunir en un mismo espacio todas las necesidades del propietario: citas, historial médico, tratamientos y comunicación con la clínica. </li>
+                <li>Simplificación de la navegación: Diseñar una estructura clara e intuitiva que permita acceder rápidamente a las funciones más utilizadas. </li>
+                <li>Comunicación más accesible: Facilitar el contacto con la clínica y reducir la dependencia de llamadas telefónicas para consultas y gestiones habituales </li>
+                <li>Seguimiento de la salud: Ofrecer un espacio donde consultar la informacion de cada mascota y recibir avisos sobre vacunas, revisiones y tratamientos </li>
+                <li>Experiencia personalizada: adaptar la información y los servicios a cada mascota y a las necesidades de su propietario</li>
+              </ul>
+            </div>
+          </section>
+
+          <!-- PALETA -->
+          <section class="vn-seccion" id="paleta">
+            <h2>Paleta de color</h2>
+            <div class="vn-paleta">
+              <div class="vn-color" style="--c:#FC94A9">#FC94A9</div>
+              <div class="vn-color" style="--c:#065567">#065567</div>
+              <div class="vn-color" style="--c:#FFFBF9">#FFFBF9</div>
+            </div>
+          </section>
+
+          <!-- PANTALLAS -->
+     <section class="vn-seccion" id="pantallas">
+  <h2>Pantallas de la App</h2>
+  <div class="vn-pantallas">
+    <img src="assets/pantalla3vetnova.png" class="vn-pantalla-img" alt="Pantalla 1 de VetNova">
+    <img src="assets/pantalla2vetnova.png" class="vn-pantalla-img" alt="Pantalla 2 de VetNova">
+    <img src="assets/pantalla4vetnova.png" class="vn-pantalla-img" alt="Pantalla 3 de VetNova">
+    <img src="assets/pantalla5vetnova.png" class="vn-pantalla-img" alt="Pantalla 3 de VetNova">
+  </div>
+</section>
+
+          <!-- VERSIÓN WEB (SOBREMESA) -->
+          <section class="vn-seccion" id="web">
+            <h2>Versión web (sobremesa)</h2>
+            <p class="vn-intro">
+              En la versión de sobremesa puedes ver con más cómodidad dónde se encuentran las clínicas y los diferentes planes de salud
+            </p>
+
+            <div class="vn-web-grid">
+
+              <figure class="vn-web">
+                <img src="assets/Homeweb1vetnova.png" class="vn-web-img" alt="Inicio">
+                <figcaption>Inicio</figcaption>
+              </figure>
+
+              <figure class="vn-web">
+                 <img src="assets/Homeweb4vetnova.png" class="vn-web-img" alt="Inicio">
+                <figcaption> Perfil de mascotas </figcaption>
+              </figure>
+
+               <figure class="vn-web">
+                 <img src="assets/Homeweb3vetnova.png" class="vn-web-img" alt="Inicio">
+                <figcaption>Entrada de usuario</figcaption>
+              </figure>
+
+              <figure class="vn-web">
+                <img src="assets/Homeweb2vetnova.png" class="vn-web-img" alt="Inicio">
+                <figcaption>Servicios y planes</figcaption>
+              </figure>
+
+            </div>
+          </section>
+
+          <!-- ITERACIONES Y APRENDIZAJE -->
+          <section class="vn-seccion" id="iteraciones">
+            <h2>Iteraciones y aprendizaje</h2>
+            <p class="vn-intro">
+            A lo largo del proyecto, el diseño evolucionó mediante diferentes iteraciones orientadas a simplificar la navegación, mejorar la jerarquía visual y facilitar el acceso a la información más relevante de cada mascota. Estos ajustes permitieron optimizar los principales flujos de usuario, teniendo en cuenta las necesidades detectadas durante el análisis previo.
+            </p>
+
+            <div class="vn-tarjetas">
+
+              <article class="vn-tarjeta">
+                <h3>Iteración 1</h3>
+                <h4>Qué probamos</h4>
+                <p>En las primeras versiones, el proceso para solicitar una cita veterinaria incluía demasiados pasos. Además, algunas acciones principales, como pedir cita o consultar el historial médico, no destacaban lo suficiente dentro de la interfaz..</p>
+                <h4>Qué cambiamos</h4>
+                <p>Simplificamos el proceso de solicitud de citas mediante una selección más directa de fecha y hora, acompañada de una confirmación clara. También ajustamos tamaños, colores y espaciados para dar mayor protagonismo a las acciones principales y facilitar la navegación.</p>
+              </article>
+
+              <article class="vn-tarjeta">
+                <h3>Iteración 2</h3>
+                <h4>Qué probamos</h4>
+                <p>Inicialmente, algunos datos importantes sobre la mascota estaban distribuidos en diferentes secciones, lo que podía dificultar su localización y consulta rápida.</p>
+                <h4>Qué cambiamos</h4>
+                <p>Reorganizamos la información para mejorar su distribución y jerarquía visual, facilitando el acceso a los datos más relevantes de cada mascota y haciendo que la experiencia resultara más intuitiva.</p>
+              </article>
+
+              <article class="vn-tarjeta">
+                <h3>Aprendizajes</h3>
+                <h4>Lo que funcionó</h4>
+                <p>La simplificación de los flujos de navegación y la mejora de la jerarquía visual fueron claves para conseguir una experiencia más intuitiva. Reducir los pasos para solicitar una cita y reorganizar la información permitió dar mayor protagonismo a las acciones principales y facilitar el acceso a los datos más importantes de cada mascota. Además, el análisis de la competencia y de las opiniones de los usuarios resultó fundamental para identificar necesidades reales y orientar las decisiones de diseño.</p>
+                <h4>Lo que haría distinto</h4>
+                <p>Si volviera a desarrollar este proyecto, incorporaría pruebas de usabilidad desde las primeras fases del diseño para detectar posibles dificultades antes de avanzar con las propuestas visuales. También dedicaría más tiempo a validar cada iteración con usuarios reales, comprobando si los cambios realizados responden verdaderamente a sus necesidades y si mejoran su experiencia al utilizar la aplicación.</p>
+              </article>
+
+            </div>
+          </section>
+
+          <!-- FINAL -->
+          <footer class="vn-final">
+            <p>Gracias por tu atención, puedes continuar viendo otros proyectos abajo 🐾</p>
+            <a href="ui-ux.html"> ← Volver a proyectos</a>
+          </footer>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

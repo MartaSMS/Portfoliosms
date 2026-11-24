@@ -1,0 +1,454 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  >
+
+  <title>Tonali</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/tonalilogo.png">
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Borel&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="ux.css">
+
+  <style>
+  
+    .ventana-navegador {
+      background: #ffffff;
+
+      scroll-behavior: smooth;                 
+      scrollbar-width: thin;
+      scrollbar-color: #000000 #05656B;        
+    }
+
+   
+    .vn {
+      --alto-ventana: 42.78cqw;
+      --alto-barra: 3.4cqw;
+
+      font-family: "germania one", sans-serif;
+      color: #000000;
+    }
+
+    /* ---------- Barra fija de arriba (se queda al hacer scroll) ---------- */
+    .vn-barra {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+
+      box-sizing: border-box;
+      height: var(--alto-barra);
+      padding: 0 3cqw;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      background: #748E55;
+      border-bottom: 0.1cqw solid rgba(0, 0, 0, 0.07);
+    }
+
+    .vn-barra a {
+      font-size: 0.9cqw;
+      font-weight: 700;
+      color: #ffffff;
+      text-decoration: none;
+
+      transition: color 0.3s ease;
+    }
+
+    .vn-barra a:hover { color: #2a352b; }
+
+    .vn-enlaces {
+      display: flex;
+      gap: 2cqw;
+    }
+
+    .vn-hero {
+      box-sizing: border-box;
+      height: calc(var(--alto-ventana) - var(--alto-barra));
+      padding: 0 6cqw;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 4cqw;
+
+      position: relative;
+    }
+
+    .vn-hero-texto { flex: 1; }
+
+    .vn-etiqueta {
+      margin: 0 0 0.6cqw;
+
+      font-size: 0.9cqw;
+      font-weight: 800;
+      letter-spacing: 0.15cqw;
+      text-transform: uppercase;
+      color: #05656B;
+    }
+
+    .vn-titulo {
+      margin: 0 0 1cqw;
+
+      font-size: 4.5cqw;
+      font-weight: 800;
+      line-height: 1;
+      color: #05656B;
+    }
+
+    .vn-lead {
+      margin: 0;
+      max-width: 32cqw;
+
+      font-size: 1.15cqw;
+      line-height: 1.55;
+    }
+
+    .vn-movil {
+      display: block;
+      height: 33cqw;
+      width: auto;
+    }
+
+    .vn-bajar {
+      position: absolute;
+      left: 50%;
+      bottom: 1.2cqw;
+      transform: translateX(-50%);
+
+      font-size: 0.85cqw;
+      font-weight: 700;
+      color: #968227;
+      text-decoration: none;
+
+      animation: rebote 1.6s ease-in-out infinite;
+    }
+
+    @keyframes rebote {
+      0%, 100% { transform: translate(-50%, 0); }
+      50%      { transform: translate(-50%, 0.5cqw); }
+    }
+
+    .vn-seccion {
+      padding: 4cqw 6cqw;
+      scroll-margin-top: var(--alto-barra);
+    }
+
+    .vn-seccion h2 {
+      margin: 0 0 1.2cqw;
+
+      font-size: 2cqw;
+      font-weight: 800;
+      color: #968227;
+    }
+
+    .vn-seccion p {
+      margin: 0;
+      max-width: 55cqw;
+
+      font-size: 1.05cqw;
+      line-height: 1.65;
+    }
+
+    .vn-paleta {
+      display: flex;
+      gap: 1.5cqw;
+    }
+
+    .vn-color {
+      width: 9cqw;
+
+      font-size: 0.8cqw;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .vn-color::before {
+      content: "";
+      display: block;
+      height: 5cqw;
+      margin-bottom: 0.5cqw;
+
+      background: var(--c);
+      border-radius: 1cqw;
+      box-shadow: inset 0 0 0 0.1cqw rgba(0, 0, 0, 0.12);
+    }
+
+    .vn-pantallas {
+      display: flex;
+      gap: 2.5cqw;
+    }
+
+    .vn-pantalla {
+      width: 15.87cqw;       
+      aspect-ratio: 175 / 364;
+
+      background: #f8f1d6;
+      border-radius: 1.8cqw;
+    }
+
+
+    .vn-final {
+      padding: 4cqw 6cqw 5cqw;
+      text-align: center;
+    }
+
+    .vn-final p {
+      margin: 0 0 1cqw;
+
+      font-size: 1.3cqw;
+      font-weight: 800;
+      color: #968227
+    }
+
+    .vn-final a {
+      font-size: 1cqw;
+      font-weight: 700;
+      color: #000000;
+      text-decoration: none;
+    }
+
+    .vn-final a:hover { color: #748E55; }
+
+
+    .vn-seccion p.vn-intro {
+      margin-bottom: 2cqw;
+    }
+
+    .vn-tarjetas {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.8cqw;
+    }
+
+    .vn-tarjeta {
+      padding: 1.6cqw;
+
+      background: #ffffff;
+      border: 0.1cqw solid rgba(255, 255, 255, 0.4);
+      border-radius: 1.2cqw;
+    }
+
+    .vn-tarjeta h3 {
+      margin: 0 0 0.4cqw;
+
+      font-size: 1.3cqw;
+      font-weight: 800;
+      color: #748E55;
+    }
+
+    .vn-tarjeta h4,
+    .vn-conclusion h4 {
+      margin: 1cqw 0 0.3cqw;
+
+      font-size: 0.75cqw;
+      font-weight: 800;
+      letter-spacing: 0.1cqw;
+      text-transform: uppercase;
+      color: #05656B
+    }
+
+    .vn-seccion .vn-tarjeta p,
+    .vn-seccion .vn-conclusion p {
+      max-width: none;
+
+      font-size: 0.95cqw;
+      line-height: 1.55;
+    }
+
+    .vn-conclusion {
+      margin-top: 2cqw;
+      padding: 1.4cqw 2cqw;
+
+      background: #ffeff2;
+      border-left: 0.4cqw solid #92878a;
+      border-radius: 0 1cqw 1cqw 0;
+    }
+
+    .vn-conclusion h4 { margin-top: 0; }
+
+    .vn-web-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2.2cqw;
+    }
+
+    .vn-web { margin: 0; }
+
+    .vn-web-pantalla {
+      aspect-ratio: 16 / 10;
+
+      background: #f8f1d6;      
+      border-radius: 0.8cqw;
+    }
+
+    .vn-web-img {
+      display: block;
+      width: 100%;
+      height: auto;
+
+      border-radius: 0.8cqw;
+      box-shadow: 0 0.4cqw 1.2cqw rgba(6, 85, 103, 0.15);
+    }
+
+    .vn-web figcaption {
+      margin-top: 0.6cqw;
+
+      font-size: 0.85cqw;
+      font-weight: 700;
+      text-align: center;
+      color: #05656B;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="escena-ux">
+    <img
+      src="assets/fondodiseñoux.png"
+      class="background"
+      alt=""
+    >
+
+    <div class="elementos">
+
+ 
+      <div class="ventana-navegador">
+        <div class="vn">
+
+          <nav class="vn-barra">
+            <a href="ui-ux.html">← Volver a proyectos</a>
+            <div class="vn-enlaces">
+              <a href="#sobre">Sobre el proyecto</a>
+              <a href="#competencia">Competencia</a>
+              <a href="#paleta">Paleta</a>
+              <a href="#pantallas">Pantallas</a>
+              <a href="#iteraciones">Iteraciones</a>
+            </div>
+          </nav>
+
+          <!-- CABECERA -->
+          <header class="vn-hero">
+            <div class="vn-hero-texto">
+              <p class="vn-etiqueta">App móvil · UX / UI</p>
+              <h1 class="vn-titulo">Tonali</h1>
+              <p class="vn-lead">
+              Tras la creación de la entidad visual, pasamos a la creación de una app cómoda para la compra y servicios de seguimiento de envios para Tonali.
+              </p>
+            </div>
+
+            <img src="assets/tonaliapp.png" class="vn-movil" alt="Tonali">
+
+            <a href="#sobre" class="vn-bajar">Desliza ↓</a>
+          </header>
+
+          <!-- SOBRE EL PROYECTO -->
+          <section class="vn-seccion" id="sobre">
+            <h2>Sobre el proyecto</h2>
+            <p>
+          Diseñar y desarrollar una plataforma de e-commerce móvil (App) que traduzca una identidad visual densa y esotérica en una interfaz funcional, intuitiva y limpia. El reto principal fue equilibrar el storytelling místico con una experiencia de usuario (UX) eficiente, facilitando la compra de productos artesanales (serums, tés y jabones) sin perder la atmósfera de "ritual" que define a la marca.
+            </p>
+          </section>
+
+          <!-- ANÁLISIS DE LA COMPETENCIA -->
+          <section class="vn-seccion" id="competencia">
+            <h2>Analisis de competidores</h2>
+            <p class="vn-intro">
+            Para el desarrollo de la App, se analizaron tres perfiles de competidores, las marcas de cosmética natural estandarizadas que tienen navegación rápida, fotos de productos minimalistas pero hay falta de experiencia.
+
+Tiendas esotéricas que conectan con lo emocional profundo pero estan demasiado saturadas y tienen procesos de pago poco fiables. Y las marcas artesanales que apenas tienen presencia móvil, ahí es donde esta nuestra oportinidad.</p>
+
+            <div class="vn-tarjetas">
+
+              <article class="vn-tarjeta">
+                <h3>Puntos fuertes</h3>
+                <p> ​La App de Tonali se sitúa en un "punto dulce": ofrece la confiabilidad y claridad de una gran marca de cosmética, pero envuelta en la exclusividad y el misticismo de un taller de alquimia tradicional.
+
+                </p>     
+            </article>
+
+            </div>
+
+          <!-- PALETA -->
+          <section class="vn-seccion" id="paleta">
+            <h2>Paleta de color</h2>
+            <div class="vn-paleta">
+              <div class="vn-color" style="--c:#05656B">#05656B</div>
+              <div class="vn-color" style="--c:#968227">#968227</div>
+              <div class="vn-color" style="--c:#748E55">#748E55</div>
+            </div>
+          </section>
+
+          <!-- PANTALLAS -->
+     <section class="vn-seccion" id="pantallas">
+  <h2>Pantallas de la App</h2>
+  <div class="vn-pantallas">
+    <img src="assets/hometonali.png" class="vn-pantalla-img" alt="Pantalla 1 de Tonali">
+    <img src="assets/perfilcuentatonali.png" class="vn-pantalla-img" alt="Pantalla 3 de museo del prado">
+    <img src="assets/ventanadepagotonali.png" class="vn-pantalla-img" alt="Pantalla 4 de museo del prado">
+    <img src="assets/ordertonali.png" class="vn-pantalla-img" alt="Pantalla 4 de museo del prado">
+  </div>
+</section>
+
+
+          <!-- ITERACIONES Y APRENDIZAJE -->
+          <section class="vn-seccion" id="iteraciones">
+            <h2>Iteraciones y aprendizaje</h2>
+            <p class="vn-intro">
+           El proceso de diseño de Tonali supuso encontrar un equilibrio entre una identidad visual cargada de simbolismo celta y una interfaz sencilla e intuitiva, capaz de facilitar el proceso de compra sin perder la personalidad de la marca.</p>
+
+            <div class="vn-tarjetas">
+
+              <article class="vn-tarjeta">
+                <h3>Iteración 1</h3>
+                <h4>Qué probamos</h4>
+                <p>En las primeras versiones se planteó utilizar una tipografía celta en todos los encabezados, botones y elementos de navegación para reforzar la identidad visual de Tonali y transmitir su esencia en cada apartado de la aplicación.</p>
+                <h4>Qué cambiamos</h4>
+                <p>Tras comprobar que esta tipografía dificultaba la lectura rápida y la navegación, decidimos limitar su uso a los títulos de las colecciones y elementos decorativos. Para el resto de la interfaz incorporamos una tipografía sans-serif geométrica y limpia, mejorando la legibilidad y manteniendo el carácter visual de la marca.</p>
+              </article>
+
+              <article class="vn-tarjeta">
+                <h3>Iteración 2</h3>
+                <h4>Qué probamos</h4>
+                <p>Exploramos cómo integrar los elementos simbólicos y decorativos de la identidad de Tonali dentro de una interfaz de compra, buscando que la estética tuviera presencia sin interferir en las acciones principales del usuario.</p>
+                <h4>Qué cambiamos</h4>
+                <p>Priorizamos una estructura más minimalista y funcional, reduciendo el protagonismo de los elementos decorativos en las zonas de interacción. De esta manera, conseguimos mantener la personalidad de Tonali sin comprometer la claridad de la navegación ni el proceso de compra.</p>
+              </article>
+
+              <article class="vn-tarjeta">
+                <h3>Aprendizajes</h3>
+                <h4>Lo que funcionó</h4>
+                <p>Este proyecto me enseñó que la identidad visual no debe convertirse en un obstáculo para la experiencia de usuario, sino funcionar como un vehículo para transmitir la personalidad de una marca. Encontrar el equilibrio entre la simbología celta y una interfaz funcional permitió construir una experiencia coherente, donde la estética y la usabilidad conviven sin competir entre sí.</p>
+                <h4>Lo que haría distinto</h4>
+                <p>Dedicaría más tiempo a validar las decisiones tipográficas y visuales desde las primeras fases del proyecto, especialmente en dispositivos móviles. También exploraría diferentes formas de integrar la simbología de la marca en pequeños detalles de interacción, permitiendo reforzar su identidad sin sobrecargar la interfaz.</p>
+              </article>
+
+            </div>
+          </section>
+
+          <!-- FINAL -->
+          <footer class="vn-final">
+            <p>Gracias por tu atención, puedes continuar viendo otros proyectos abajo 🌿</p>
+            <a href="ui-ux.html"> ← Volver a proyectos</a>
+          </footer>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>

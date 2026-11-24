@@ -1,0 +1,461 @@
+<!doctype html>
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8">
+
+  <meta
+    name="viewport"
+    content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+  >
+
+  <title>Museo del prado</title>
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="assets/faviconmuseo.png">
+
+  <!-- Fuentes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Berkshire+Swash&family=Borel&family=Nunito:wght@400;700;800&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="style.css">
+  <link rel="stylesheet" href="ux.css">
+
+  <style>
+  
+    .ventana-navegador {
+      background: #ebdfd9;
+
+      scroll-behavior: smooth;                 
+      scrollbar-width: thin;
+      scrollbar-color: #000000 #8a001c;        
+    }
+
+   
+    .vn {
+      --alto-ventana: 42.78cqw;
+      --alto-barra: 3.4cqw;
+
+      font-family: "montserrat", sans-serif;
+      color: #3a3a3a;
+    }
+
+    
+    .vn-barra {
+      position: sticky;
+      top: 0;
+      z-index: 5;
+
+      box-sizing: border-box;
+      height: var(--alto-barra);
+      padding: 0 3cqw;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+
+      background: #630909c2;
+      border-bottom: 0.1cqw solid rgba(0, 0, 0, 0.07);
+    }
+
+    .vn-barra a {
+      font-size: 0.9cqw;
+      font-weight: 700;
+      color: #ffffff;
+      text-decoration: none;
+
+      transition: color 0.3s ease;
+    }
+
+    .vn-barra a:hover { color: #ff3b2d; }
+
+    .vn-enlaces {
+      display: flex;
+      gap: 2cqw;
+    }
+
+    .vn-hero {
+      box-sizing: border-box;
+      height: calc(var(--alto-ventana) - var(--alto-barra));
+      padding: 0 6cqw;
+
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 4cqw;
+
+      position: relative;
+    }
+
+    .vn-hero-texto { flex: 1; }
+
+    .vn-etiqueta {
+      margin: 0 0 0.6cqw;
+
+      font-size: 0.9cqw;
+      font-weight: 800;
+      letter-spacing: 0.15cqw;
+      text-transform: uppercase;
+      color: #610606;
+    }
+
+    .vn-titulo {
+      margin: 0 0 1cqw;
+
+      font-size: 4.5cqw;
+      font-weight: 800;
+      line-height: 1;
+      color: #800707;
+    }
+
+    .vn-lead {
+      margin: 0;
+      max-width: 32cqw;
+
+      font-size: 1.15cqw;
+      line-height: 1.55;
+    }
+
+    .vn-movil {
+      display: block;
+      height: 33cqw;
+      width: auto;
+    }
+
+    .vn-bajar {
+      position: absolute;
+      left: 50%;
+      bottom: 1.2cqw;
+      transform: translateX(-50%);
+
+      font-size: 0.85cqw;
+      font-weight: 700;
+      color: #6C0606;
+      text-decoration: none;
+
+      animation: rebote 1.6s ease-in-out infinite;
+    }
+
+    @keyframes rebote {
+      0%, 100% { transform: translate(-50%, 0); }
+      50%      { transform: translate(-50%, 0.5cqw); }
+    }
+
+    .vn-seccion {
+      padding: 4cqw 6cqw;
+      scroll-margin-top: var(--alto-barra);
+    }
+
+    .vn-seccion h2 {
+      margin: 0 0 1.2cqw;
+
+      font-size: 2cqw;
+      font-weight: 800;
+      color: #6C0606;
+    }
+
+    .vn-seccion p {
+      margin: 0;
+      max-width: 55cqw;
+
+      font-size: 1.05cqw;
+      line-height: 1.65;
+    }
+
+    .vn-paleta {
+      display: flex;
+      gap: 1.5cqw;
+    }
+
+    .vn-color {
+      width: 9cqw;
+
+      font-size: 0.8cqw;
+      font-weight: 700;
+      text-align: center;
+    }
+
+    .vn-color::before {
+      content: "";
+      display: block;
+      height: 5cqw;
+      margin-bottom: 0.5cqw;
+
+      background: var(--c);
+      border-radius: 1cqw;
+      box-shadow: inset 0 0 0 0.1cqw rgba(0, 0, 0, 0.12);
+    }
+
+    .vn-pantallas {
+      display: flex;
+      gap: 2.5cqw;
+    }
+
+    .vn-pantalla {
+      width: 15.87cqw;       
+      aspect-ratio: 175 / 364;
+
+      background: #f8f1d6;
+      border-radius: 1.8cqw;
+    }
+
+
+    .vn-final {
+      padding: 4cqw 6cqw 5cqw;
+      text-align: center;
+    }
+
+    .vn-final p {
+      margin: 0 0 1cqw;
+
+      font-size: 1.3cqw;
+      font-weight: 800;
+      color: #6C0606;
+    }
+
+    .vn-final a {
+      font-size: 1cqw;
+      font-weight: 700;
+      color: #000000;
+      text-decoration: none;
+    }
+
+    .vn-final a:hover { color: #960a00; }
+
+
+    .vn-seccion p.vn-intro {
+      margin-bottom: 2cqw;
+    }
+
+    .vn-tarjetas {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.8cqw;
+    }
+
+    .vn-tarjeta {
+      padding: 1.6cqw;
+
+      background: #ffffff;
+      border: 0.1cqw solid rgba(255, 255, 255, 0.4);
+      border-radius: 1.2cqw;
+    }
+
+    .vn-tarjeta h3 {
+      margin: 0 0 0.4cqw;
+
+      font-size: 1.3cqw;
+      font-weight: 800;
+      color: #6C0606;
+    }
+
+    .vn-tarjeta h4,
+    .vn-conclusion h4 {
+      margin: 1cqw 0 0.3cqw;
+
+      font-size: 0.75cqw;
+      font-weight: 800;
+      letter-spacing: 0.1cqw;
+      text-transform: uppercase;
+      color: #a12740;
+    }
+
+    .vn-seccion .vn-tarjeta p,
+    .vn-seccion .vn-conclusion p {
+      max-width: none;
+
+      font-size: 0.95cqw;
+      line-height: 1.55;
+    }
+
+    .vn-conclusion {
+      margin-top: 2cqw;
+      padding: 1.4cqw 2cqw;
+
+      background: #ffeff2;
+      border-left: 0.4cqw solid #92878a;
+      border-radius: 0 1cqw 1cqw 0;
+    }
+
+    .vn-conclusion h4 { margin-top: 0; }
+
+    .vn-web-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2.2cqw;
+    }
+
+    .vn-web { margin: 0; }
+
+    .vn-web-pantalla {
+      aspect-ratio: 16 / 10;
+
+      background: #f8f1d6;      
+      border-radius: 0.8cqw;
+    }
+
+    .vn-web-img {
+      display: block;
+      width: 100%;
+      height: auto;
+
+      border-radius: 0.8cqw;
+      box-shadow: 0 0.4cqw 1.2cqw rgba(6, 85, 103, 0.15);
+    }
+
+    .vn-web figcaption {
+      margin-top: 0.6cqw;
+
+      font-size: 0.85cqw;
+      font-weight: 700;
+      text-align: center;
+      color: #6C0606;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="escena-ux">
+    <img
+      src="assets/fondodiseñoux.png"
+      class="background"
+      alt=""
+    >
+
+    <div class="elementos">
+
+ 
+      <div class="ventana-navegador">
+        <div class="vn">
+
+          <nav class="vn-barra">
+            <a href="ui-ux.html">← Volver a proyectos</a>
+            <div class="vn-enlaces">
+              <a href="#sobre">Sobre el proyecto</a>
+              <a href="#competencia">Competencia</a>
+              <a href="#paleta">Paleta</a>
+              <a href="#pantallas">Pantallas</a>
+              <a href="#iteraciones">Iteraciones</a>
+            </div>
+          </nav>
+
+          <!-- CABECERA -->
+          <header class="vn-hero">
+            <div class="vn-hero-texto">
+              <p class="vn-etiqueta">App móvil · UX / UI</p>
+              <h1 class="vn-titulo">Museo del Prado</h1>
+              <p class="vn-lead">
+              Las aplicaciones del Museo del Prado están centradas principalmente en la exploración de contenido y el aprendizaje, ofreciendo audioguías, recorridos personalizados y acceso a obras digitalizadas. Sin embargo, presentan oportunidades de mejora en la interacción y en la gestión completa de la experiencia del usuario.
+              </p>
+            </div>
+
+            <img src="assets/museodelprado.png" class="vn-movil" alt="museo del prado">
+
+            <a href="#sobre" class="vn-bajar">Desliza ↓</a>
+          </header>
+
+          <!-- SOBRE EL PROYECTO -->
+          <section class="vn-seccion" id="sobre">
+            <h2>Sobre el proyecto</h2>
+            <p>
+           La experiencia visual al abrir la aplicación resulta poco atractiva y transmite la sensación de ser una versión reducida de la web, sin una adaptación real al entorno móvil. La interfaz presenta problemas de jerarquía y organización, con elementos muy próximos entre sí y sin suficiente separación, lo que dificulta la lectura y la correcta identificación de los distintos bloques de contenido.
+Además, la tipografía y los tamaños no están completamente optimizados para dispositivos móviles, lo que afecta a la legibilidad y a la comodidad de uso. En conjunto, el diseño parece haber sido trasladado desde web a móvil sin una reconsideración de los principios de diseño mobile-first, impactando negativamente en la experiencia del usuario.
+             </p>
+          </section>
+
+          <!-- ANÁLISIS DE LA COMPETENCIA -->
+          <section class="vn-seccion" id="competencia">
+            <h2>Mi propuesta</h2>
+            <p class="vn-intro">
+             A partir del análisis, se detectaron oportunidades para mejorar la experiencia digital de la app del museo ampliando sus funcionalidades. Se propone añadir una sección de novedades con exposiciones actuales y futuras, incluyendo su duración para facilitar la planificación. También se plantea una galería interactiva de autores y obras para una exploración más visual, la compra de entradas desde la app para reducir fricciones, y una sección “Prepara tu visita” con información útil, guías y recomendaciones para mejorar la experiencia del usuario.</p>
+
+            <div class="vn-tarjetas">
+
+              <article class="vn-tarjeta">
+                <h3>Mejoras a incorporar</h3>
+                <ul>
+                    <li> Mejora de la IU cambiando el diseño</li>
+                    <li> Sección de novedades </li>
+                    <li> Sección Colecciones </li>
+                    <li> Obras </li>
+                    <li> Información </li>
+                    <li> Mapa del recinto </li>
+                    <li> Cómo llegar </li>
+                    <li> Comprar entradas </li>
+
+                </ul>     
+            </article>
+
+            </div>
+
+          <!-- PALETA -->
+          <section class="vn-seccion" id="paleta">
+            <h2>Paleta de color</h2>
+            <div class="vn-paleta">
+              <div class="vn-color" style="--c:#781E1E">#781E1E</div>
+              <div class="vn-color" style="--c:#8E8E8E">#8E8E8E</div>
+              <div class="vn-color" style="--c:#FFFFFF">#FFFFFF</div>
+            </div>
+          </section>
+
+          <!-- PANTALLAS -->
+     <section class="vn-seccion" id="pantallas">
+  <h2>Pantallas de la App</h2>
+  <div class="vn-pantallas">
+    <img src="assets/homemuseoprado.png" class="vn-pantalla-img" alt="Pantalla 1 de museo del prado">
+    <img src="assets/Coleccionesmuseoprado.png" class="vn-pantalla-img" alt="Pantalla 2 de Museo del prado">
+    <img src="assets/artistamuseoprado.png" class="vn-pantalla-img" alt="Pantalla 3 de museo del prado">
+    <img src="assets/visitamuseoprado.png" class="vn-pantalla-img" alt="Pantalla 4 de museo del prado">
+  </div>
+</section>
+
+
+          <!-- ITERACIONES Y APRENDIZAJE -->
+          <section class="vn-seccion" id="iteraciones">
+            <h2>Iteraciones y aprendizaje</h2>
+            <p class="vn-intro">
+           A lo largo del proyecto, el diseño evolucionó para mejorar el proceso de compra de entradas, reforzar la coherencia visual con la web oficial del Museo del Prado y simplificar el acceso a la información sobre sus visitas y servicios. </p>
+
+            <div class="vn-tarjetas">
+
+              <article class="vn-tarjeta">
+                <h3>Iteración 1</h3>
+                <h4>Qué probamos</h4>
+                <p>En las primeras versiones del diseño, el proceso de compra de entradas no incluía una confirmación clara una vez seleccionada la fecha y la hora, lo que podía generar dudas durante la reserva. Además, era necesario adaptar la interfaz a la identidad visual de la página web del museo.</p>
+                <h4>Qué cambiamos</h4>
+                <p>Revisamos el flujo de compra e incorporamos una confirmación clara tras la selección de fecha y hora. También ajustamos tamaños, colores y espaciados para destacar las acciones principales e incorporamos imágenes siguiendo la estética de la web oficial del Museo del Prado, manteniendo la coherencia entre ambos diseños.</p>
+              </article>
+
+              <article class="vn-tarjeta">
+                <h3>Iteración 2</h3>
+                <h4>Qué probamos</h4>
+                <p>Inicialmente, la información relacionada con las visitas y la compra de entradas estaba distribuida en diferentes secciones, lo que podía dificultar su localización y hacer que la navegación resultara menos directa.</p>
+                <h4>Qué cambiamos</h4>
+                <p>Reorganizamos el contenido en el apartado «Bienvenido al Museo del Prado», agrupando la información sobre visitas y ventas en un mismo espacio mediante botones de acceso directo. De esta forma, conseguimos simplificar la estructura y facilitar el acceso a los servicios principales.</p>
+              </article>
+
+              <article class="vn-tarjeta">
+                <h3>Aprendizajes</h3>
+                <h4>Lo que funcionó</h4>
+                <p>Este proyecto me permitió aprender a trabajar siguiendo una identidad visual y unas guías estéticas previamente establecidas por una empresa. Adaptar el diseño de la aplicación al lenguaje visual y al layout de la web oficial fue fundamental para conseguir coherencia entre ambas plataformas y ofrecer una experiencia visual unificada.</p>
+                <h4>Lo que haría distinto</h4>
+                <p>Daría todavía más importancia a la validación de los flujos de usuario desde las primeras fases del proyecto. También profundizaría en la identificación y priorización de necesidades para conseguir reunir la información y los servicios más importantes en una única aplicación, evitando un exceso de pantallas o elementos que pudieran generar dudas o sobrecargar al usuario.</p>
+              </article>
+
+            </div>
+          </section>
+
+          <!-- FINAL -->
+          <footer class="vn-final">
+            <p>Gracias por tu atención, puedes continuar viendo otros proyectos abajo 🏛️</p>
+            <a href="ui-ux.html"> ← Volver a proyectos</a>
+          </footer>
+
+        </div>
+      </div>
+
+    </div>
+  </div>
+</body>
+</html>
