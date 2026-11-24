@@ -13,8 +13,6 @@ body {
 }
 
 
-
-
 .scene {
   position: fixed;
 
@@ -42,7 +40,9 @@ body {
 }
 
 
-
+/* =====================================================
+   BACKGROUND
+   ===================================================== */
 
 .background {
   display: block;
@@ -59,6 +59,9 @@ body {
 }
 
 
+/* =====================================================
+   ZONA DE ELEMENTOS
+   ===================================================== */
 
 .elementos {
   position: absolute;
@@ -74,7 +77,9 @@ body {
 }
 
 
-
+/* =====================================================
+   CONFIGURACIÓN COMÚN DE LOS ENLACES
+   ===================================================== */
 
 .Button-Diseno,
 .button-web,
@@ -94,6 +99,9 @@ body {
 }
 
 
+/* =====================================================
+   CONFIGURACIÓN COMÚN DE LAS IMÁGENES
+   ===================================================== */
 
 .Button-Diseno img,
 .button-web img,
@@ -103,7 +111,6 @@ body {
 
   display: block;
 
-
   filter: none;
 
   transition:
@@ -111,6 +118,10 @@ body {
     transform 0.5s ease;
 }
 
+
+/* =====================================================
+   CONFIGURACIÓN COMÚN DE LOS TEXTOS
+   ===================================================== */
 
 .button-text,
 .texto-web,
@@ -142,7 +153,9 @@ body {
 }
 
 
-
+/* =====================================================
+   DISEÑO GRÁFICO
+   ===================================================== */
 
 .Button-Diseno {
   top: 84%;
@@ -167,7 +180,9 @@ body {
 }
 
 
-
+/* =====================================================
+   DISEÑO WEB / UI / UX
+   ===================================================== */
 
 .button-web {
   top: 57%;
@@ -192,6 +207,9 @@ body {
 }
 
 
+/* =====================================================
+   CONTACTO
+   ===================================================== */
 
 .button-contacto {
   top: 83%;
@@ -217,7 +235,9 @@ body {
 }
 
 
-
+/* =====================================================
+   SOBRE MÍ
+   ===================================================== */
 
 .button-sobre-mi {
   top: 80%;
@@ -243,6 +263,7 @@ body {
 }
 
 
+
 .Button-Diseno:hover img,
 .button-web:hover img,
 .button-contacto:hover img,
@@ -260,7 +281,6 @@ body {
 
 
 
-
 .Button-Diseno:hover .button-text,
 .button-web:hover .texto-web,
 .button-contacto:hover .texto-contacto,
@@ -272,12 +292,12 @@ body {
 
 
 
-
 .Button-Diseno:hover .button-text {
   transform:
     translateX(-50%)
     scale(1.04);
 }
+
 
 
 
@@ -289,10 +309,10 @@ body {
 
 
 
-
 .button-contacto:hover .texto-contacto {
   transform: scale(1.04);
 }
+
 
 
 
@@ -330,13 +350,13 @@ body {
 
 
 
+
 .elementos {
   position: absolute;
   inset: 0;
   z-index: 10;
   pointer-events: none;
 }
-
 
 
 
@@ -424,7 +444,8 @@ body {
   left: 0%;
 }
 .foto-proyecto-4 {
-  position: absolute; 
+  position: absolute;  
+
   width: 40%;
   height: 80%;
   object-fit: cover;
@@ -434,7 +455,7 @@ body {
   left: 0%;
 }
 .foto-proyecto-5 {
-  position: absolute;  
+  position: absolute;   
 
   width: 78%;
   height: 100%;
@@ -915,11 +936,11 @@ transform: rotate(0deg);
 }
 .boton-libro-texto {
   position: absolute;
-  top: -1.5cqw;     
+  top: -1.5cqw;    
   left: 50%;
   transform: translateX(-50%);
 
-  z-index: 7;     
+  z-index: 7;         
 
   white-space: nowrap;
 
@@ -965,31 +986,31 @@ transform: rotate(0deg);
 }
 .lista-proyecto2 {
   position: absolute;
-  top: 50%;          
+  top: 50%;           
   left: 43%;
   transform: translateX(-50%);
   width: 70%;
 
   margin: 0;
-  padding-left: 1.2cqw;  
+  padding-left: 1.2cqw;   
 
   font-family: "Berkshire Swash", serif;
   font-size: 0.85cqw;
   color: #1f1711;
 
-  list-style-type: disc;  
+  list-style-type: disc;   
 }
 
 .lista-proyecto2 li {
-  margin-bottom: 0.3cqw; 
-  text-align: left;        
+  margin-bottom: 0.3cqw;   
+  text-align: left;       
 }
-.page p.sobremitexto {  
+.page p.sobremitexto {   
   position: absolute;
   top: 13%;
   left: 0%;
 
-  width: 45%;            
+  width: 45%;           
 
   margin: 0;
   padding-left: 1.9cqw;
@@ -999,12 +1020,13 @@ transform: rotate(0deg);
   color: #1f1711;
   text-align: justify;
 }
-.page p.titulosobremi {  
+.page p.titulosobremi {   
   position: absolute;
   top: 5%;
   left: 3%;
 
-  width: 60%;       
+  width: 60%;            
+
   margin: 0;
   padding-left: 1.5cqw;
 
@@ -1013,7 +1035,7 @@ transform: rotate(0deg);
   color: #e977d0;
   text-align: justify;
 }
-.page p.especialidades {  
+.page p.especialidades {   
   position: absolute;
   top: 44%;
   left: 0%;
@@ -1033,7 +1055,7 @@ transform: rotate(0deg);
   top: 75%;
   left: 0%;
 
-  width: 60%;          
+  width: 60%;           
 
   margin: 0;
   padding-left: 1.5cqw;
@@ -1045,13 +1067,13 @@ transform: rotate(0deg);
 }
 .lista-proyecto3 {
   position: absolute;
-  top: 81%;        
+  top: 81%;          
   left: 43%;
   transform: translateX(-50%);
   width: 70%;
 
   margin: 0;
-  padding-left: 1.2cqw;   
+  padding-left: 1.2cqw;  
 
   font-family: "Berkshire Swash", serif;
   font-size: 0.85cqw;
@@ -1061,19 +1083,19 @@ transform: rotate(0deg);
 }
 .lista-proyecto4 {
   position: absolute;
-  top: 11%;         
+  top: 11%;           
   left: 43%;
   transform: translateX(-50%);
   width: 70%;
 
   margin: 0;
-  padding-left: 1.2cqw; 
+  padding-left: 1.2cqw;   
 
   font-family: "Berkshire Swash", serif;
   font-size: 0.85cqw;
   color: #1f1711;
 
-  list-style-type: disc;  
+  list-style-type: disc;   
 }
 .lista-proyecto5 {
   position: absolute;
@@ -1083,20 +1105,20 @@ transform: rotate(0deg);
   width: 70%;
 
   margin: 0;
-  padding-left: 1.2cqw;   
+  padding-left: 1.2cqw;  
 
   font-family: "Berkshire Swash", serif;
   font-size: 1cqw;
   color: #1f1711;
 
-  list-style-type: disc;  
+  list-style-type: disc;   
 }
 .page p.experiencia {  
   position: absolute;
   top: 35%;
   left: 30%;
 
-  width: 60%;          
+  width: 60%;            
 
   margin: 0;
   padding-left: 1.5cqw;
@@ -1106,7 +1128,7 @@ transform: rotate(0deg);
   color: #e977d0;
   text-align: justify;
 }
-.page p.empresa-puesto { 
+.page p.empresa-puesto {   
   position: absolute;
   top: 41%;
   left: 15%;
@@ -1129,7 +1151,7 @@ transform: rotate(0deg);
   width: 80%;
 
   margin: 0;
-  padding-left: 1.2cqw; 
+  padding-left: 1.2cqw;  
 
   font-family: "Berkshire Swash", serif;
   font-size: 0.85cqw;
@@ -1140,13 +1162,13 @@ transform: rotate(0deg);
 }
 .mi-boton {
   position: absolute;
-  top: 90%;   
+  top: 90%;      
   left: 50%;
 
   z-index: 10;
 
   cursor: pointer;
-  pointer-events: auto; 
+  pointer-events: auto;  
 }
 
 .mi-boton-img {
@@ -1169,12 +1191,12 @@ transform: rotate(0deg);
   filter: none;
   transition: filter 0.4s ease;
 }
-.info {   
+.info { 
   position: absolute;
   top: 27%;
   left: 35%;
 
-  width: 60%;        
+  width: 60%;          
 
   margin: 0;
   padding-left: 1.5cqw;
@@ -1186,7 +1208,7 @@ transform: rotate(0deg);
   transform: rotate(-14deg);
 }
 .mi-boton-img-sb {
-  width: 2cqw;   
+  width: 2cqw;  
   height: auto;
   display: block;
 
@@ -1208,12 +1230,13 @@ transform: rotate(0deg);
   cursor: pointer;
   pointer-events: auto;   
 }
-.mail-in {
+.mail-in {   
   position: absolute;
   top: 107%;
   left: 5%;
 
-  width: 60%;           
+  width: 60%;            
+
   margin: 0;
   padding-left: 1.5cqw;
 
@@ -1239,28 +1262,64 @@ transform: rotate(0deg);
 }
 .mi-boton-sobre {
   position: absolute;
-  top: 150%;     
+  top: 150%;      
   left: 20%;
 
   z-index: 10;
 
   cursor: pointer;
-  pointer-events: auto;   /
+  pointer-events: auto;  
 }
-.pestana-home {
-  position: absolute;
-  width: 12cqw;       
-  top: -3%;          
+
+
+.escena-ux {
+  position: fixed;
+
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
 
-  z-index: 100;
+  transform: translate(-50%, -50%);
 
-  transition: filter 0.4s ease;
+  width: 100vw;
+  width: 100dvw;
+
+  height: 100vh;
+  height: 100dvh;
+
+  max-width: calc(100vh * 1440 / 1024);
+  max-width: calc(100dvh * 1440 / 1024);
+
+  max-height: calc(100vw * 1024 / 1440);
+  max-height: calc(100dvw * 1024 / 1440);
+
+  container-type: size;
+  container-name: escena-ux;
 }
 
-.pestana-home:hover {
-  filter:
-    drop-shadow(0 0 8px rgba(255, 180, 220, 0.6))
-    drop-shadow(0 0 25px rgba(255, 180, 220, 0.4));
+
+.ventana-navegador {
+  position: absolute;
+
+  left: 8.681%;
+  top: 15.918%;
+  width: 88.264%;
+  height: 60.156%;
+
+  background: #35363a;      
+
+  overflow-y: auto;
+  overflow-x: hidden;
+
+  pointer-events: auto;    
+
+
+  scrollbar-width: thin;
+  scrollbar-color: #5f6368 #35363a;
+}
+.vn-pantalla-img {
+  display: block;
+  width: 15.87cqw;      
+  height: auto;          
+
+  border-radius: 1.8cqw;
 }
